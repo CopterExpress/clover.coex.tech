@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Using FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Using JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1278,7 +1310,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.10" data-path="camera_calib.html">
+        <li class="chapter " data-level="1.9.10" data-path="robocross2019.html">
+            
+                <a href="robocross2019.html">
+            
+                    
+                    Robocross-2019
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="camera_calib.html">
             
                 <a href="camera_calib.html">
             
@@ -1342,6 +1387,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="step-by-step-guide-on-autonomous-flight-with-clover-4"><a name="step-by-step-guide-on-autonomous-flight-with-clover-4" class="plugin-anchor" href="#step-by-step-guide-on-autonomous-flight-with-clover-4"><i class="fa fa-link" aria-hidden="true"></i></a>Step-by-step guide on autonomous flight with Clover 4</h1>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The following applies to <a href="image.html">image version</a> <strong>0.20</strong> and up. See <a href="https://github.com/CopterExpress/clover/blob/v0.19/docs/en/auto_setup.md" target="_blank">previous version of the article</a> for older images.</p>
+</blockquote>
 <p>This manual contains links to other articles in which each of the topics addressed is discussed in more detail. If you encounter difficulties while reading one of these articles, it is recommended that you return to this manual, since many operations here are described step by step and some unnecessary steps are skipped.</p>
 <h2 id="raspberry-pi-initial-setup"><a name="raspberry-pi-initial-setup" class="plugin-anchor" href="#raspberry-pi-initial-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Raspberry Pi initial setup</h2>
 <ul>
@@ -1391,8 +1439,8 @@
 <p>Show list of files and folders:</p>
 <pre><code class="lang-bash">ls
 </code></pre>
-<p>Go to certain directory by entering the path too it (catkin_ws/src/clever/clever/launch/):</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> catkin_ws/src/clever/clever/launch/
+<p>Go to certain directory by entering the path too it (catkin_ws/src/clover/clover/launch/):</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> catkin_ws/src/clover/clover/launch/
 </code></pre>
 <p>Go to home directory:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span>
@@ -1400,8 +1448,8 @@
 <p>Open the file <code>file.py</code>:</p>
 <pre><code class="lang-bash">nano file.py
 </code></pre>
-<p>Open the file clever.launch by entering the full path to it (it works even if you&apos;re in a different directory):</p>
-<pre><code class="lang-bash">nano ~/catkin_ws/src/clever/clever/launch/clever.launch
+<p>Open the file clover.launch by entering the full path to it (it works even if you&apos;re in a different directory):</p>
+<pre><code class="lang-bash">nano ~/catkin_ws/src/clover/clover/launch/clover.launch
 </code></pre>
 <p>Save file (press sequentially):</p>
 <pre><code class="lang-bash">Ctrl+X; Y; Enter
@@ -1415,11 +1463,11 @@
 <p>Raspberry Pi complete reboot:</p>
 <pre><code class="lang-bash">sudo reboot
 </code></pre>
-<p>Reboot only Clever package:</p>
-<pre><code class="lang-bash">sudo systemctl restart clever
+<p>Reboot only the <code>clover</code> service:</p>
+<pre><code class="lang-bash">sudo systemctl restart clover
 </code></pre>
 <p>Perform selfcheck:</p>
-<pre><code class="lang-bash">rosrun clever selfcheck.py
+<pre><code class="lang-bash">rosrun clover selfcheck.py
 </code></pre>
 <p>Stop a program:</p>
 <pre><code class="lang-bash">Ctrl+C
@@ -1427,42 +1475,42 @@
 <p>Start a program <code>myprogram.py</code> using Python:</p>
 <pre><code class="lang-bash">python myprogram.py
 </code></pre>
-<p>Journal of the events related to Clever package. Scroll the list by pressing Enter or Ctrl+V (scrolls faster):</p>
-<pre><code class="lang-bash">journalctl -u clever
+<p>Journal of the events related to <code>clover</code> package. Scroll the list by pressing Enter or Ctrl+V (scrolls faster):</p>
+<pre><code class="lang-bash">journalctl -u clover
 </code></pre>
 <p>Open the sudoers file with super user rights (this particular file doesn&apos;t open without sudo. You can use sudo to open other locked files or run programs that require super user rights):</p>
 <pre><code class="lang-bash">sudo nano /etc/sudoers
 </code></pre>
 <h2 id="setting-raspberry-pi-for-autonomous-flight"><a name="setting-raspberry-pi-for-autonomous-flight" class="plugin-anchor" href="#setting-raspberry-pi-for-autonomous-flight"><i class="fa fa-link" aria-hidden="true"></i></a>Setting Raspberry Pi for autonomous flight</h2>
-<p>Most of the parameters for autonomous flight are located in the following directory: <code>~/catkin_ws/src/clever/clever/launch/</code>.</p>
+<p>Most of the parameters for autonomous flight are located in the following directory: <code>~/catkin_ws/src/clover/clover/launch/</code>.</p>
 <ul>
 <li><p>Enter the directory:</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/catkin_ws/src/clever/clever/launch/
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/catkin_ws/src/clover/clover/launch/
 </code></pre>
 <p>The <code>~</code> symbol stands for home directory of your user. If you are already in the directory, you can go with just the command:</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> catkin_ws/src/clever/clever/launch/
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> catkin_ws/src/clover/clover/launch/
 </code></pre>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
-<p> Tab can automatically complete the names of files, folders or commands. You need to start entering the desired name and press Tab. If there are no conflicts, the name will be auto completed. For example, to quickly enter the path to the <code>catkin_ws/src/clever/clever/launch/</code> directory, after entering <code>cd</code>, you can start typing the following key combination:<code>c-Tab-s-Tab-c-Tab-c-Tab-l-Tab</code>. This way you can save a lot of time when writing a long command, and also avoid possible mistakes in writing the path.</p>
+<p> Tab can automatically complete the names of files, folders or commands. You need to start entering the desired name and press Tab. If there are no conflicts, the name will be auto completed. For example, to quickly enter the path to the <code>catkin_ws/src/clover/clover/launch/</code> directory, after entering <code>cd</code>, you can start typing the following key combination:<code>c-Tab-s-Tab-c-Tab-c-Tab-l-Tab</code>. This way you can save a lot of time when writing a long command, and also avoid possible mistakes in writing the path.</p>
 </blockquote>
 </li>
 <li><p>In this folder you need to configure three files:</p>
 <ul>
-<li><code>clever.launch</code></li>
+<li><code>clover.launch</code></li>
 <li><code>aruco.launch</code></li>
 <li><code>main_camera.launch</code></li>
 </ul>
 </li>
-<li><p>Open the file <code>clever.launch</code>:</p>
-<pre><code class="lang-bash">nano clever.launch
+<li><p>Open the file <code>clover.launch</code>:</p>
+<pre><code class="lang-bash">nano clover.launch
 </code></pre>
 <p>You must be in the directory in which the file is located. If you are in other directory, you can open the file by writing the full path to it:</p>
-<pre><code class="lang-bash">nano ~/catkin_ws/src/clever/clever/launch/clever.launch
+<pre><code class="lang-bash">nano ~/catkin_ws/src/clover/clover/launch/clover.launch
 </code></pre>
 <p>If two users are editing a file at the same time, or if previously the file was closed incorrectly, nano will not display the file contents, it will ask for permission to display the file. To grant permission, press Y.</p>
 <p>If the content of a file is still empty, you may have entered the file name incorrectly. You need to pay attention to the extension. If you entered a wrong name or extension, nano will create a new empty file named this way, which is undesirable. Such file should be deleted.</p>
 </li>
-<li><p>Find the following line in clever.launch file:</p>
+<li><p>Find the following line in clover.launch file:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
 </code></pre>
 <p>Replace <code>false</code> with <code>true</code>:</p>
@@ -1493,7 +1541,7 @@
 <li>the marker map name is default: map.txt</li>
 <li>the marker map numbering is from the top left corner (key <code>--top-left</code>)</li>
 </ul>
-<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.335 10 10 1 1 0 &gt; ~/catkin_ws/src/clever/aruco_pose/map/map.txt --top-left
+<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.335 10 10 1 1 0 &gt; ~/catkin_ws/src/clover/aruco_pose/map/map.txt --top-left
 </code></pre>
 <p>In most maps, numbering starts with a zero marker. Also, in most cases, numbering starts from the upper left corner, so when generating, it is very important to enter the key <code>--top-left</code>.</p>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
@@ -1522,8 +1570,8 @@ and replace map.txt with your map name.</p>
 <li><p>Save changes. Press sequentially:</p>
 <pre><code>Ctrl+x; y; Enter
 </code></pre></li>
-<li><p>Restart the <code>clever</code> service:</p>
-<pre><code class="lang-bash">sudo systemctl restart clever
+<li><p>Restart the <code>clover</code> service:</p>
+<pre><code class="lang-bash">sudo systemctl restart clover
 </code></pre>
 </li>
 </ul>
@@ -1555,7 +1603,7 @@ and replace map.txt with your map name.</p>
 <p>Perform selfcheck when you have set up your drone or when you have faced problems. The selfcheck process is described in the article &quot;<a href="selfcheck.html">Automated self checks</a>&quot;</p>
 <ul>
 <li><p>Run the command:</p>
-<pre><code class="lang-bash">rosrun clever selfcheck.py
+<pre><code class="lang-bash">rosrun clover selfcheck.py
 </code></pre>
 </li>
 </ul>
@@ -1607,7 +1655,7 @@ rospy.sleep(<span class="hljs-number">3</span>)
 </code></pre></li>
 </ul>
 <h2 id="writing-the-program-to-the-drone"><a name="writing-the-program-to-the-drone" class="plugin-anchor" href="#writing-the-program-to-the-drone"><i class="fa fa-link" aria-hidden="true"></i></a>Writing the program to the drone</h2>
-<p>The easiest way to send the program is to copy the content of the program, create a new file on the Clever command line and paste the program text into the file.</p>
+<p>The easiest way to send the program is to copy the content of the program, create a new file in the command line and paste the program text into the file.</p>
 <ul>
 <li><p>To create the file <code>myprogram.py</code>, run the command:</p>
 <pre><code class="lang-bash">nano myprogram.py
@@ -1694,7 +1742,7 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Guide on autonomous flight","level":"1.8.2","depth":2,"next":{"title":"Hostname","level":"1.8.3","depth":2,"path":"hostname.md","ref":"hostname.md","articles":[]},"previous":{"title":"COEX Pix","level":"1.8.1","depth":2,"path":"coex_pix.md","ref":"coex_pix.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"auto_setup.md","mtime":"2020-05-07T15:08:12.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Guide on autonomous flight","level":"1.8.2","depth":2,"next":{"title":"Hostname","level":"1.8.3","depth":2,"path":"hostname.md","ref":"hostname.md","articles":[]},"previous":{"title":"COEX Pix","level":"1.8.1","depth":2,"path":"coex_pix.md","ref":"coex_pix.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"auto_setup.md","mtime":"2020-06-02T08:54:58.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>

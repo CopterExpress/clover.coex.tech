@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Using FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Using JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1278,7 +1310,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.10" data-path="camera_calib.html">
+        <li class="chapter " data-level="1.9.10" data-path="robocross2019.html">
+            
+                <a href="robocross2019.html">
+            
+                    
+                    Robocross-2019
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="camera_calib.html">
             
                 <a href="camera_calib.html">
             
@@ -1343,26 +1388,15 @@
                                 
                                 <h1 id="working-with-a-laser-rangefinder"><a name="working-with-a-laser-rangefinder" class="plugin-anchor" href="#working-with-a-laser-rangefinder"><i class="fa fa-link" aria-hidden="true"></i></a>Working with a laser rangefinder</h1>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Documentation for the <a href="image.html">image</a>, versions, starting with <strong>0.18</strong>. For older versions refer to <a href="https://github.com/CopterExpress/clover/blob/v0.17/docs/en/laser.md" target="_blank">documentation for version <strong>0.17</strong></a>.</p>
+<p> Documentation for the <a href="image.html">image</a>, versions, starting with <strong>0.20</strong>. For older versions refer to <a href="https://github.com/CopterExpress/clover/blob/v0.19/docs/en/laser.md" target="_blank">documentation for version <strong>0.19</strong></a>.</p>
 </blockquote>
 <h2 id="vl53l1x-rangefinder"><a name="vl53l1x-rangefinder" class="plugin-anchor" href="#vl53l1x-rangefinder"><i class="fa fa-link" aria-hidden="true"></i></a>VL53L1X Rangefinder</h2>
 <p>The rangefinder model recommended for Clover is STM VL53L1X. This rangefinder can measure distances from 0 to 4 m while ensuring high measurement accuracy.</p>
 <p>The <a href="image.html">image for Raspberry Pi</a> contains pre-installed corresponding ROS driver.</p>
 <h3 id="connecting-to-raspberry-pi"><a name="connecting-to-raspberry-pi" class="plugin-anchor" href="#connecting-to-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting to Raspberry Pi</h3>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> You need to flash a <a id="download-firmware" href="https://github.com/CopterExpress/Firmware/releases" target="_blank">custom PX4 firmware</a> on your flight controller for the rangefinder to work correctly. See more about firmware in the <a href="firmware.html">corresponding article</a>.</p>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
+<p> We recommend using our <a href="firmware.html#modified-firmware-for-clover">custom PX4 firmware for Clover</a> for best laser rangefinder support.</p>
 </blockquote>
-<script type="text/javascript">
-    fetch('https://api.github.com/repos/CopterExpress/Firmware/releases').then(res => res.json()).then(function(data) {
-        for (let release of data) {
-            if (!release.prerelease && !release.draft && release.tag_name.includes('-clever.')) {
-                document.querySelector('#download-firmware').href = release.html_url;
-                return;
-            }
-        }
-    });
-</script>
-
 <p>Connect the rangefinder to the 3V, GND, SCL and SDA pins via the I&#xB2;C interface:</p>
 <p><img src="../assets/raspberry-vl53l1x.png" alt="Connecting VL53L1X" height="600"></p>
 <p>If the pin marked GND is occupied, you can use any other ground pin (look at the <a href="https://pinout.xyz" target="_blank">pinout</a> for reference).</p>
@@ -1370,7 +1404,7 @@
 <p> You can connect several peripheral devices via the I&#xB2;C interface simultaneously. Use a parallel connection for that.</p>
 </blockquote>
 <h3 id="enabling-the-rangefinder"><a name="enabling-the-rangefinder" class="plugin-anchor" href="#enabling-the-rangefinder"><i class="fa fa-link" aria-hidden="true"></i></a>Enabling the rangefinder</h3>
-<p><a href="ssh.html">Connect via SSH</a> and edit file <code>~/catkin_ws/src/clever/clever/launch/clever.launch</code> so that the VL53L1X driver is enabled:</p>
+<p><a href="ssh.html">Connect via SSH</a> and edit file <code>~/catkin_ws/src/clover/clover/launch/clover.launch</code> so that the VL53L1X driver is enabled:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rangefinder_vl53l1x&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 </code></pre>
 <p>By default, the rangefinder driver sends the data to Pixhawk via the <code>/rangefinder/range</code> topic. To view data from the topic, use the following command:</p>
@@ -1463,7 +1497,7 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Interfacing with a laser rangefinder","level":"1.7.8","depth":2,"next":{"title":"LED strip","level":"1.7.9","depth":2,"path":"leds.md","ref":"leds.md","articles":[]},"previous":{"title":"Code snippets","level":"1.7.7","depth":2,"path":"snippets.md","ref":"snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"laser.md","mtime":"2020-05-07T15:08:12.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Interfacing with a laser rangefinder","level":"1.7.8","depth":2,"next":{"title":"LED strip","level":"1.7.9","depth":2,"path":"leds.md","ref":"leds.md","articles":[]},"previous":{"title":"Code snippets","level":"1.7.7","depth":2,"path":"snippets.md","ref":"snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"laser.md","mtime":"2020-06-02T08:54:58.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>

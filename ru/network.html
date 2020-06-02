@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Работа с FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Использование JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1577,7 +1609,7 @@
 <p> &#x418;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430; <code>ssid</code>, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x44C; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; Wi-Fi &#x441;&#x435;&#x442;&#x438;, &#x438; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430; <code>psk</code>, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;:</p>
 <pre><code class="lang-txt"> network={
      ssid=&quot;my-super-ssid&quot;
-     psk=&quot;cleverwifi123&quot;
+     psk=&quot;cloverwifi123&quot;
      mode=2
      proto=RSN
      key_mgmt=WPA-PSK
@@ -1635,8 +1667,8 @@
  country=GB
 
  network={
-     ssid=&quot;CLEVER-1234&quot;
-     psk=&quot;cleverwifi&quot;
+     ssid=&quot;clover-1234&quot;
+     psk=&quot;cloverwifi&quot;
      mode=2
      proto=RSN
      key_mgmt=WPA-PSK
@@ -1644,7 +1676,7 @@
      group=CCMP
      auth_alg=OPEN
  }
-</code></pre><p> &#x433;&#x434;&#x435; <code>CLEVER-1234</code> &#x2013; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x441;&#x435;&#x442;&#x438;, &#x430; <code>cleverwifi</code> &#x2013; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;.</p>
+</code></pre><p> &#x433;&#x434;&#x435; <code>clover-1234</code> &#x2013; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x441;&#x435;&#x442;&#x438;, &#x430; <code>cloverwifi</code> &#x2013; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;.</p>
 </li>
 <li><p>&#x412;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x435; &#x441;&#x43B;&#x443;&#x436;&#x431;&#x443; <code>dnsmasq</code>.</p>
 <pre><code class="lang-bash"> sudo systemctl <span class="hljs-built_in">enable</span> dnsmasq
@@ -1682,8 +1714,8 @@ update_config=1
 country=GB
 
 network={
-        ssid=\&quot;CLEVER-SMIRNOV\&quot;
-        psk=\&quot;cleverwifi\&quot;
+        ssid=\&quot;my-clover\&quot;
+        psk=\&quot;cloverwifi\&quot;
         mode=2
         proto=RSN
         key_mgmt=WPA-PSK
@@ -1717,7 +1749,7 @@ network={
 <pre><code class="lang-bash">sudo apt install dnsmasq-base
 </code></pre>
 <pre><code class="lang-bash"><span class="hljs-comment"># &#x412;&#x44B;&#x437;&#x43E;&#x432; dnsmasq-base</span>
-sudo dnsmasq --interface=wlan0 --address=/clever/coex/192.168.11.1 --no-daemon --dhcp-range=192.168.11.100,192.168.11.200,12h --no-hosts --filterwin2k --bogus-priv --domain-needed --quiet-dhcp6 --log-queries
+sudo dnsmasq --interface=wlan0 --address=/clover/coex/192.168.11.1 --no-daemon --dhcp-range=192.168.11.100,192.168.11.200,12h --no-hosts --filterwin2k --bogus-priv --domain-needed --quiet-dhcp6 --log-queries
 
 <span class="hljs-comment"># &#x41F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x435;&#x435; &#x43E; dnsmasq-base</span>
 dnsmasq --help
@@ -1730,7 +1762,7 @@ man dnsmasq
 </code></pre>
 <pre><code class="lang-bash">cat &lt;&lt; EOF | sudo tee <span class="hljs-_">-a</span> /etc/dnsmasq.conf
 interface=wlan0
-address=/clever/coex/192.168.11.1
+address=/clover/coex/192.168.11.1
 dhcp-range=192.168.11.100,192.168.11.200,12h
 no-hosts
 filterwin2k
@@ -1830,7 +1862,7 @@ EOF
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Настройка сети RPi","level":"1.8.14","depth":2,"next":{"title":"Интерфейс UART","level":"1.8.15","depth":2,"path":"uart.md","ref":"uart.md","articles":[]},"previous":{"title":"Пилотирование со смартфона","level":"1.8.13","depth":2,"path":"rc.md","ref":"rc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"network.md","mtime":"2020-05-07T15:08:12.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"Настройка сети RPi","level":"1.8.14","depth":2,"next":{"title":"Интерфейс UART","level":"1.8.15","depth":2,"path":"uart.md","ref":"uart.md","articles":[]},"previous":{"title":"Пилотирование со смартфона","level":"1.8.13","depth":2,"path":"rc.md","ref":"rc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"network.md","mtime":"2020-06-02T08:54:58.182Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>

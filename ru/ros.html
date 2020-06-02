@@ -81,7 +81,7 @@
     <link rel="next" href="mavros.html" />
     
     
-    <link rel="prev" href="autolaunch.html" />
+    <link rel="prev" href="javascript.html" />
     
 
     </head>
@@ -257,6 +257,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Работа с FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Использование JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1613,11 +1645,11 @@ rospy.Subscriber(<span class="hljs-string">&apos;/foo&apos;</span>, String, foo_
 <p>&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x430;&#x44F; &#x441;&#x442;&#x430;&#x442;&#x44C;&#x44F;: <a href="http://wiki.ros.org/Services" target="_blank">http://wiki.ros.org/Services</a></p>
 <p>&#x421;&#x435;&#x440;&#x432;&#x438;&#x441; &#x2013; &#x44D;&#x442;&#x43E; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x430;&#x44F; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x43D;&#x430; &#x438;&#x437; &#x43E;&#x434;&#x43D;&#x43E;&#x439; &#x43D;&#x43E;&#x434;&#x44B;, &#x430; &#x43E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43D;&#x430; &#x432; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x439;. &#x423; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x430; &#x435;&#x441;&#x442;&#x44C; &#x438;&#x43C;&#x44F;, &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x43D;&#x43E;&#x435; &#x438;&#x43C;&#x435;&#x43D;&#x438; &#x442;&#x43E;&#x43F;&#x438;&#x43A;&#x430;, &#x438; 2 &#x442;&#x438;&#x43F;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439;: &#x442;&#x438;&#x43F; &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x441;&#x430; &#x438; &#x442;&#x438;&#x43F; &#x43E;&#x442;&#x432;&#x435;&#x442;&#x430;.</p>
 <p>&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430; ROS-&#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x430; &#x438;&#x437; &#x44F;&#x437;&#x44B;&#x43A;&#x430; Python:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> clever.srv <span class="hljs-keyword">import</span> GetTelemetry
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> clover.srv <span class="hljs-keyword">import</span> GetTelemetry
 
 <span class="hljs-comment"># ...</span>
 
-<span class="hljs-comment"># &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x435;&#x440;&#x442;&#x43A;&#x443; &#x43D;&#x430;&#x434; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x43E;&#x43C; get_telemetry &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; clever &#x441; &#x442;&#x438;&#x43F;&#x43E;&#x43C; GetTelemetry:</span>
+<span class="hljs-comment"># &#x421;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x43C; &#x43E;&#x431;&#x435;&#x440;&#x442;&#x43A;&#x443; &#x43D;&#x430;&#x434; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x43E;&#x43C; get_telemetry &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; clover &#x441; &#x442;&#x438;&#x43F;&#x43E;&#x43C; GetTelemetry:</span>
 get_telemetry = rospy.ServiceProxy(<span class="hljs-string">&apos;get_telemetry&apos;</span>, srv.GetTelemetry)
 
 <span class="hljs-comment"># &#x412;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441; &#x438; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x430;&#x435;&#x43C; &#x442;&#x435;&#x43B;&#x435;&#x43C;&#x435;&#x442;&#x440;&#x438;&#x44E; &#x43A;&#x432;&#x430;&#x434;&#x440;&#x43E;&#x43A;&#x43E;&#x43F;&#x442;&#x435;&#x440;&#x430;:</span>
@@ -1661,7 +1693,7 @@ telemetry = get_telemetry()
 
             
                 
-                <a href="autolaunch.html" class="navigation navigation-prev " aria-label="Previous page: Автозапуск ПО">
+                <a href="javascript.html" class="navigation navigation-prev " aria-label="Previous page: Использование JavaScript">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1677,7 +1709,7 @@ telemetry = get_telemetry()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ROS","level":"1.7.15","depth":2,"next":{"title":"MAVROS","level":"1.7.16","depth":2,"path":"mavros.md","ref":"mavros.md","articles":[]},"previous":{"title":"Автозапуск ПО","level":"1.7.14","depth":2,"path":"autolaunch.md","ref":"autolaunch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"ros.md","mtime":"2020-05-07T15:08:12.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"ROS","level":"1.7.16","depth":2,"next":{"title":"MAVROS","level":"1.7.17","depth":2,"path":"mavros.md","ref":"mavros.md","articles":[]},"previous":{"title":"Использование JavaScript","level":"1.7.15","depth":2,"path":"javascript.md","ref":"javascript.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"ros.md","mtime":"2020-06-02T08:54:58.182Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>

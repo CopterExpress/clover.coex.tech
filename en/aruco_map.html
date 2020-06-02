@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Using FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Using JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1278,7 +1310,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.10" data-path="camera_calib.html">
+        <li class="chapter " data-level="1.9.10" data-path="robocross2019.html">
+            
+                <a href="robocross2019.html">
+            
+                    
+                    Robocross-2019
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="camera_calib.html">
             
                 <a href="camera_calib.html">
             
@@ -1351,10 +1396,10 @@
 </blockquote>
 <p><code>aruco_map</code> module detects whole ArUco-based maps. Map-based navigation is possible using vision position estimate (VPE).</p>
 <h2 id="configuration"><a name="configuration" class="plugin-anchor" href="#configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration</h2>
-<p>Set the <code>aruco</code> argument in <code>~/catkin_ws/src/clever/clever/launch/clever.launch</code> to <code>true</code>:</p>
+<p>Set the <code>aruco</code> argument in <code>~/catkin_ws/src/clover/clover/launch/clover.launch</code> to <code>true</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 </code></pre>
-<p>In order to enable map detection set <code>aruco_map</code> and <code>aruco_detect</code> arguments to <code>true</code> in <code>~/catkin_ws/src/clever/clever/launch/aruco.launch</code>:</p>
+<p>In order to enable map detection set <code>aruco_map</code> and <code>aruco_detect</code> arguments to <code>true</code> in <code>~/catkin_ws/src/clover/clover/launch/aruco.launch</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco_detect&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco_map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 </code></pre>
@@ -1368,13 +1413,13 @@
 <p>Map path is defined in the <code>map</code> parameter:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find aruco_pose)/map/map.txt&quot;</span>/&gt;</span>
 </code></pre>
-<p>Some map examples are provided in <a href="https://github.com/CopterExpress/clover/tree/master/aruco_pose/map" target="_blank"><code>~/catkin_ws/src/clever/aruco_pose/map</code></a>.</p>
+<p>Some map examples are provided in <a href="https://github.com/CopterExpress/clover/tree/master/aruco_pose/map" target="_blank"><code>~/catkin_ws/src/clover/aruco_pose/map</code></a>.</p>
 <p>Grid maps may be generated using the <code>genmap.py</code> script:</p>
-<pre><code class="lang-bash">rosrun aruco_pose genmap.py length x y dist_x dist_y first &gt; ~/catkin_ws/src/clever/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
+<pre><code class="lang-bash">rosrun aruco_pose genmap.py length x y dist_x dist_y first &gt; ~/catkin_ws/src/clover/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
 </code></pre>
 <p><code>length</code> is the size of each marker, <code>x</code> is the marker count along the <em>x</em> axis, <code>y</code> is the marker count along the <em>y</em> axis, <code>dist_x</code> is the distance between the centers of adjacent markers along the <em>x</em> axis, <code>dist_y</code> is the distance between the centers of the <em>y</em> axis, <code>first</code> is the ID of the first marker (top left marker, unless <code>--bottom-left</code> is specified), <code>test_map.txt</code> is the name of the generated map file. The optional <code>--bottom-left</code> parameter changes the numbering of markers, making the bottom left marker the first one.</p>
 <p>Usage example:</p>
-<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.33 2 4 1 1 0 &gt; ~/catkin_ws/src/clever/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
+<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.33 2 4 1 1 0 &gt; ~/catkin_ws/src/clover/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
 </code></pre>
 <p>Additional information on the utility can be obtained using <code>-h</code> key: <code>rosrun aruco_pose genmap.py -h</code>.</p>
 <!-- You can also use the [online map editor](arucogenmap.md) to create ArUco maps. -->
@@ -1394,13 +1439,6 @@
 <p><img src="../assets/aruco-map-axis.png" width="600"></p>
 <h2 id="vpe-setup"><a name="vpe-setup" class="plugin-anchor" href="#vpe-setup"><i class="fa fa-link" aria-hidden="true"></i></a>VPE setup</h2>
 <p>In order to enable vision position estimation you should use the following <a href="px4_parameters.html">PX4 parameters</a>.</p>
-<p>If you&apos;re using <strong>EKF2</strong> estimator (<code>SYS_MC_EST_GROUP</code> parameter is set to <code>ekf2</code>), make sure the following is set:</p>
-<ul>
-<li><code>EKF2_AID_MASK</code> should have <code>vision position fusion</code> and <code>vision yaw fusion</code> flags set.</li>
-<li>Vision angle observations noise: <code>EKF2_EVA_NOISE</code> = 0.1 rad.</li>
-<li>Vision position observations noise: <code>EKF2_EVP_NOISE</code> = 0.1 m.</li>
-<li><code>EKF2_EV_DELAY</code> = 0.</li>
-</ul>
 <p>If you&apos;re using <strong>LPE</strong> (<code>SYS_MC_EST_GROUP</code> parameter is set to <code>local_position_estimator,attitude_estimator_q</code>):</p>
 <ul>
 <li><code>LPE_FUSION</code> should have <code>vision position</code> and <code>land detector</code> flags set. We suggest unsetting the <code>baro</code> flag for indoor flights.</li>
@@ -1410,6 +1448,13 @@
 <li><code>LPE_VIS_DELAY</code> = 0 sec.</li>
 </ul>
 <!-- * Compass should not be fused: `ATT_W_MAG` = 0 -->
+<p>If you&apos;re using <strong>EKF2</strong> estimator (<code>SYS_MC_EST_GROUP</code> parameter is set to <code>ekf2</code>), make sure the following is set:</p>
+<ul>
+<li><code>EKF2_AID_MASK</code> should have <code>vision position fusion</code> and <code>vision yaw fusion</code> flags set.</li>
+<li>Vision angle observations noise: <code>EKF2_EVA_NOISE</code> = 0.1 rad.</li>
+<li>Vision position observations noise: <code>EKF2_EVP_NOISE</code> = 0.1 m.</li>
+<li><code>EKF2_EV_DELAY</code> = 0.</li>
+</ul>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
 <p> We recommend using <strong>LPE</strong> for marker-based navigation.</p>
 </blockquote>
@@ -1439,7 +1484,7 @@ navigate(x=<span class="hljs-number">2</span>, y=<span class="hljs-number">2</sp
 <h2 id="placing-markers-on-the-ceiling"><a name="placing-markers-on-the-ceiling" class="plugin-anchor" href="#placing-markers-on-the-ceiling"><i class="fa fa-link" aria-hidden="true"></i></a>Placing markers on the ceiling</h2>
 <p><img src="../assets/IMG_4175.JPG" alt="Ceiling markers"></p>
 <p>In order to navigate using markers on the ceiling, mount the onboard camera so that it points up and <a href="camera_setup.html">adjust the camera frame accordingly</a>.</p>
-<p>You should also set the <code>known_tilt</code> parameter to <code>map_flipped</code> in both <code>aruco_detect</code> and <code>aruco_map</code> sections of <code>~/catkin_ws/src/clever/clever/launch/aruco.launch</code>:</p>
+<p>You should also set the <code>known_tilt</code> parameter to <code>map_flipped</code> in both <code>aruco_detect</code> and <code>aruco_map</code> sections of <code>~/catkin_ws/src/clover/clover/launch/aruco.launch</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;known_tilt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;map_flipped&quot;</span>/&gt;</span>
 </code></pre>
 <p>This will flip the <code>aruco_map</code> frame (making its <strong><font color="blue">z</font></strong> axis point downward). Thus, in order to fly 2 metres below ceiling, the <code>z</code> argument for the <code>navigate</code> service should be set to 2:</p>
@@ -1492,7 +1537,7 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Map-based navigation","level":"1.7.3.3","depth":3,"next":{"title":"Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"previous":{"title":"Marker detection","level":"1.7.3.2","depth":3,"path":"aruco_marker.md","ref":"aruco_marker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"aruco_map.md","mtime":"2020-05-07T15:08:12.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Map-based navigation","level":"1.7.3.3","depth":3,"next":{"title":"Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"previous":{"title":"Marker detection","level":"1.7.3.2","depth":3,"path":"aruco_marker.md","ref":"aruco_marker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"aruco_map.md","mtime":"2020-06-02T08:54:58.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>

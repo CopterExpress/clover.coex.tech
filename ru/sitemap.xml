@@ -9,6 +9,7 @@
 <url> <loc>https://clover.coex.tech/ru/setup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/calibration.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/radio.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/rc_flysky_a8s.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/modes.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/power.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/failsafe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -37,6 +38,7 @@
 <url> <loc>https://clover.coex.tech/ru/camera.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/rviz.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/autolaunch.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/javascript.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/ros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/mavros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/coex_pix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

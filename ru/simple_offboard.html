@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Работа с FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Использование JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1564,19 +1596,19 @@
                                 
                                 <h1 id="&#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439;-&#x43F;&#x43E;&#x43B;&#x435;&#x442;-offboard"><a name="&#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439;-&#x43F;&#x43E;&#x43B;&#x435;&#x442;-offboard" class="plugin-anchor" href="#&#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439;-&#x43F;&#x43E;&#x43B;&#x435;&#x442;-offboard"><i class="fa fa-link" aria-hidden="true"></i></a>&#x410;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43F;&#x43E;&#x43B;&#x435;&#x442; (OFFBOARD)</h1>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> &#x414;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x434;&#x43B;&#x44F; &#x432;&#x435;&#x440;&#x441;&#x438;&#x439; <a href="image.html">&#x43E;&#x431;&#x440;&#x430;&#x437;&#x430;</a>, &#x43D;&#x430;&#x447;&#x438;&#x43D;&#x430;&#x44F; &#x441; <strong>0.15</strong>. &#x414;&#x43B;&#x44F; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x440;&#x430;&#x43D;&#x43D;&#x438;&#x445; &#x432;&#x435;&#x440;&#x441;&#x438;&#x439; &#x441;&#x43C;. <a href="https://github.com/CopterExpress/clover/blob/v0.14/docs/ru/simple_offboard.md" target="_blank">&#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44E; &#x434;&#x43B;&#x44F; &#x432;&#x435;&#x440;&#x441;&#x438;&#x438; <strong>0.14</strong></a>.</p>
+<p> &#x412; &#x432;&#x435;&#x440;&#x441;&#x438;&#x438; &#x43E;&#x431;&#x440;&#x430;&#x437;&#x430; <strong>0.20</strong> &#x43F;&#x430;&#x43A;&#x435;&#x442; <code>clever</code> &#x431;&#x44B;&#x43B; &#x43F;&#x435;&#x440;&#x435;&#x438;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D; &#x432; <code>clover</code>. &#x414;&#x43B;&#x44F; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x440;&#x430;&#x43D;&#x43D;&#x438;&#x445; &#x432;&#x435;&#x440;&#x441;&#x438;&#x439; &#x441;&#x43C;. &#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44E; &#x434;&#x43B;&#x44F; &#x432;&#x435;&#x440;&#x441;&#x438;&#x438; <a href="https://github.com/CopterExpress/clover/blob/v0.19/docs/ru/simple_offboard.md" target="_blank"><strong>0.19</strong></a>.</p>
 </blockquote>
 <!-- -->
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
 <p> &#x414;&#x43B;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x445; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x43E;&#x432; &#x440;&#x435;&#x43A;&#x43E;&#x43C;&#x435;&#x43D;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; <a href="firmware.html#&#x43F;&#x440;&#x43E;&#x448;&#x438;&#x432;&#x43A;&#x430;-&#x434;&#x43B;&#x44F;-&#x43A;&#x43B;&#x435;&#x432;&#x435;&#x440;&#x430;">&#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x431;&#x43E;&#x440;&#x43A;&#x438; PX4 &#x434;&#x43B;&#x44F; &#x41A;&#x43B;&#x435;&#x432;&#x435;&#x440;&#x430;</a>.</p>
 </blockquote>
-<p>&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>simple_offboard</code> &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; <code>clever</code> &#x43F;&#x440;&#x435;&#x434;&#x43D;&#x430;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D; &#x434;&#x43B;&#x44F; &#x443;&#x43F;&#x440;&#x43E;&#x449;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x434;&#x440;&#x43E;&#x43D;&#x430; (<a href="modes.html">&#x440;&#x435;&#x436;&#x438;&#x43C;</a> <code>OFFBOARD</code>). &#x41E;&#x43D; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x436;&#x435;&#x43B;&#x430;&#x435;&#x43C;&#x44B;&#x435; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; &#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x444;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x442; <a href="frames.html">&#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x443; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;</a>.</p>
+<p>&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>simple_offboard</code> &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; <code>clover</code> &#x43F;&#x440;&#x435;&#x434;&#x43D;&#x430;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D; &#x434;&#x43B;&#x44F; &#x443;&#x43F;&#x440;&#x43E;&#x449;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x434;&#x440;&#x43E;&#x43D;&#x430; (<a href="modes.html">&#x440;&#x435;&#x436;&#x438;&#x43C;</a> <code>OFFBOARD</code>). &#x41E;&#x43D; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x436;&#x435;&#x43B;&#x430;&#x435;&#x43C;&#x44B;&#x435; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438; &#x438; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x444;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x443;&#x435;&#x442; <a href="frames.html">&#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x443; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;</a>.</p>
 <p><code>simple_offboard</code> &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x432;&#x44B;&#x441;&#x43E;&#x43A;&#x43E;&#x443;&#x440;&#x43E;&#x432;&#x43D;&#x435;&#x432;&#x44B;&#x43C; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x43E;&#x43C; &#x432;&#x437;&#x430;&#x438;&#x43C;&#x43E;&#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x44F; &#x441; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x43D;&#x44B;&#x43C; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x43B;&#x435;&#x440;&#x43E;&#x43C;. &#x414;&#x43B;&#x44F; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x43D;&#x438;&#x437;&#x43A;&#x43E;&#x443;&#x440;&#x43E;&#x432;&#x43D;&#x435;&#x432;&#x43E;&#x439; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x441;&#x43C;. <a href="mavros.html">mavros</a>.</p>
 <p>&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x44B;&#x435; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x44B; &#x2013; <a href="#gettelemetry"><code>get_telemetry</code></a> (&#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x442;&#x435;&#x43B;&#x435;&#x43C;&#x435;&#x442;&#x440;&#x438;&#x438;), <a href="#navigate"><code>navigate</code></a> (&#x43F;&#x43E;&#x43B;&#x435;&#x442; &#x432; &#x437;&#x430;&#x434;&#x430;&#x43D;&#x43D;&#x443;&#x44E; &#x442;&#x43E;&#x447;&#x43A;&#x443; &#x43F;&#x43E; &#x43F;&#x440;&#x44F;&#x43C;&#x43E;&#x439;), <a href="#navigateglobal"><code>navigate_global</code></a> (&#x43F;&#x43E;&#x43B;&#x435;&#x442; &#x432; &#x433;&#x43B;&#x43E;&#x431;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x442;&#x43E;&#x447;&#x43A;&#x443; &#x43F;&#x43E; &#x43F;&#x440;&#x44F;&#x43C;&#x43E;&#x439;), <a href="#land"><code>land</code></a> (&#x43F;&#x435;&#x440;&#x435;&#x445;&#x43E;&#x434; &#x432; &#x440;&#x435;&#x436;&#x438;&#x43C; &#x43F;&#x43E;&#x441;&#x430;&#x434;&#x43A;&#x438;).</p>
 <h2 id="&#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;-&#x438;&#x437;-&#x44F;&#x437;&#x44B;&#x43A;&#x430;-python"><a name="&#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;-&#x438;&#x437;-&#x44F;&#x437;&#x44B;&#x43A;&#x430;-python" class="plugin-anchor" href="#&#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;-&#x438;&#x437;-&#x44F;&#x437;&#x44B;&#x43A;&#x430;-python"><i class="fa fa-link" aria-hidden="true"></i></a>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x438;&#x437; &#x44F;&#x437;&#x44B;&#x43A;&#x430; Python</h2>
 <p>&#x414;&#x43B;&#x44F; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;&#x43E;&#x432;, &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B;-&#x43F;&#x440;&#x43E;&#x43A;&#x441;&#x438; &#x43A; &#x43D;&#x438;&#x43C;. &#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x44D;&#x442;&#x43E;&#x442; &#x448;&#x430;&#x431;&#x43B;&#x43E;&#x43D; &#x434;&#x43B;&#x44F; &#x432;&#x430;&#x448;&#x435;&#x439; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> rospy
-<span class="hljs-keyword">from</span> clever <span class="hljs-keyword">import</span> srv
+<span class="hljs-keyword">from</span> clover <span class="hljs-keyword">import</span> srv
 <span class="hljs-keyword">from</span> std_srvs.srv <span class="hljs-keyword">import</span> Trigger
 
 rospy.init_node(<span class="hljs-string">&apos;flight&apos;</span>)
@@ -1843,7 +1875,7 @@ land = rospy.ServiceProxy(<span class="hljs-string">&apos;land&apos;</span>, Tri
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Автономный полет в OFFBOARD","level":"1.7.5","depth":2,"next":{"title":"Системы координат","level":"1.7.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"previous":{"title":"Навигация по Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"simple_offboard.md","mtime":"2020-05-07T15:08:12.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"Автономный полет в OFFBOARD","level":"1.7.5","depth":2,"next":{"title":"Системы координат","level":"1.7.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"previous":{"title":"Навигация по Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"simple_offboard.md","mtime":"2020-06-02T08:54:58.182Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>

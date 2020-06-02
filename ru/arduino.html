@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Работа с FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Использование JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1572,7 +1604,7 @@
 </code></pre>
 <p>&#x41F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x430;&#x442;&#x430;&#x43B;&#x43E;&#x433; <code>ros_lib</code> &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x441;&#x43A;&#x43E;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x432; <code>&lt;&#x43F;&#x430;&#x43F;&#x43A;&#x443; &#x441;&#x43A;&#x435;&#x442;&#x447;&#x435;&#x439;&gt;/libraries</code> &#x43D;&#x430; &#x43A;&#x43E;&#x43C;&#x43F;&#x44C;&#x44E;&#x442;&#x435;&#x440;&#x435; &#x441; Arduino IDE.</p>
 <h2 id="&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-raspberry-pi"><a name="&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-raspberry-pi" class="plugin-anchor" href="#&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>&#x41D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430; Raspberry Pi</h2>
-<p>&#x414;&#x43B;&#x44F; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A;&#x430; <code>rosserial</code> &#x441;&#x43E;&#x437;&#x434;&#x430;&#x439;&#x442;&#x435; &#x444;&#x430;&#x439;&#x43B; <code>arduino.launch</code> &#x432; &#x43A;&#x430;&#x442;&#x430;&#x43B;&#x43E;&#x433;&#x435; <code>~/catkin_ws/src/clever/clever/launch/</code> &#x441;&#x43E; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x43C; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x44B;&#x43C;:</p>
+<p>&#x414;&#x43B;&#x44F; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A;&#x430; <code>rosserial</code> &#x441;&#x43E;&#x437;&#x434;&#x430;&#x439;&#x442;&#x435; &#x444;&#x430;&#x439;&#x43B; <code>arduino.launch</code> &#x432; &#x43A;&#x430;&#x442;&#x430;&#x43B;&#x43E;&#x433;&#x435; <code>~/catkin_ws/src/clover/clover/launch/</code> &#x441;&#x43E; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x43C; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x44B;&#x43C;:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">launch</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">node</span> <span class="hljs-attr">pkg</span>=<span class="hljs-string">&quot;rosserial_python&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;serial_node.py&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;serial_node&quot;</span> <span class="hljs-attr">output</span>=<span class="hljs-string">&quot;screen&quot;</span> <span class="hljs-attr">if</span>=<span class="hljs-string">&quot;$(arg arduino)&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;port&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0&quot;</span>/&gt;</span>
@@ -1580,13 +1612,13 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">launch</span>&gt;</span>
 </code></pre>
 <p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x435;&#x434;&#x438;&#x43D;&#x43E;&#x440;&#x430;&#x437;&#x43E;&#x432;&#x43E; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x43D;&#x430; Arduino, &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x431;&#x443;&#x434;&#x435;&#x442; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x43E;&#x439;:</p>
-<pre><code class="lang-bash">roslaunch clever arduino.launch
+<pre><code class="lang-bash">roslaunch clover arduino.launch
 </code></pre>
-<p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A;&#x430;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x43A;&#x443; &#x441; Arduino &#x43F;&#x440;&#x438; &#x441;&#x442;&#x430;&#x440;&#x442;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;, &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; launch-&#x444;&#x430;&#x439;&#x43B;&#x430; &#x432; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x439; launch-&#x444;&#x430;&#x439;&#x43B; &#x41A;&#x43B;&#x435;&#x432;&#x435;&#x440;&#x430; (<code>~/catkin_ws/src/clever/clever/launch/clever.launch</code>). &#x414;&#x43E;&#x431;&#x430;&#x432;&#x44C;&#x442;&#x435; &#x432; &#x43A;&#x43E;&#x43D;&#x435;&#x446; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x444;&#x430;&#x439;&#x43B;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;:</p>
-<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find clever)/launch/arduino.launch&quot;</span>/&gt;</span>
+<p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A;&#x430;&#x442;&#x44C; &#x441;&#x432;&#x44F;&#x437;&#x43A;&#x443; &#x441; Arduino &#x43F;&#x440;&#x438; &#x441;&#x442;&#x430;&#x440;&#x442;&#x435; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x44B; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;, &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; launch-&#x444;&#x430;&#x439;&#x43B;&#x430; &#x432; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x439; launch-&#x444;&#x430;&#x439;&#x43B; &#x41A;&#x43B;&#x435;&#x432;&#x435;&#x440;&#x430; (<code>~/catkin_ws/src/clover/clover/launch/clover.launch</code>). &#x414;&#x43E;&#x431;&#x430;&#x432;&#x44C;&#x442;&#x435; &#x432; &#x43A;&#x43E;&#x43D;&#x435;&#x446; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x444;&#x430;&#x439;&#x43B;&#x430; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">file</span>=<span class="hljs-string">&quot;$(find clover)/launch/arduino.launch&quot;</span>/&gt;</span>
 </code></pre>
-<p>&#x41F;&#x440;&#x438; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x438; launch-&#x444;&#x430;&#x439;&#x43B;&#x430; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x43A;&#x435;&#x442; <code>clever</code>:</p>
-<pre><code class="lang-bash">sudo systemctl restart clever
+<p>&#x41F;&#x440;&#x438; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x438; launch-&#x444;&#x430;&#x439;&#x43B;&#x430; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x43A;&#x435;&#x442; <code>clover</code>:</p>
+<pre><code class="lang-bash">sudo systemctl restart clover
 </code></pre>
 <h2 id="&#x437;&#x430;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x438;"><a name="&#x437;&#x430;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x438;" class="plugin-anchor" href="#&#x437;&#x430;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x438;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x417;&#x430;&#x434;&#x435;&#x440;&#x436;&#x43A;&#x438;</h2>
 <p>&#x41F;&#x440;&#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; <code>rosserial_arduino</code> &#x43C;&#x438;&#x43A;&#x440;&#x43E;&#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x43B;&#x435;&#x440; Arduino &#x43D;&#x435; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x442;&#x44C; &#x437;&#x430;&#x431;&#x43B;&#x43E;&#x43A;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x447;&#x435;&#x43C; &#x43D;&#x430; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434; (&#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; <code>delay</code>); &#x438;&#x43D;&#x430;&#x447;&#x435; &#x441;&#x432;&#x44F;&#x437;&#x44C; &#x43C;&#x435;&#x436;&#x434;&#x443; Raspberry Pi &#x438; Arduino &#x431;&#x443;&#x434;&#x435;&#x442; &#x440;&#x430;&#x437;&#x43E;&#x440;&#x432;&#x430;&#x43D;&#x430;.</p>
@@ -1609,11 +1641,11 @@
 <pre><code class="lang-cpp"><span class="hljs-comment">// &#x41F;&#x43E;&#x434;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x441; rosseral</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ros.h&gt;</span></span>
 
-<span class="hljs-comment">// &#x41F;&#x43E;&#x434;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x437;&#x430;&#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x43E;&#x447;&#x43D;&#x44B;&#x445; &#x444;&#x430;&#x439;&#x43B;&#x43E;&#x432; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; Clever &#x438; MAVROS</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clever/Navigate.h&gt;</span></span>
+<span class="hljs-comment">// &#x41F;&#x43E;&#x434;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x437;&#x430;&#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x43E;&#x447;&#x43D;&#x44B;&#x445; &#x444;&#x430;&#x439;&#x43B;&#x43E;&#x432; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430; clover &#x438; MAVROS</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clover/Navigate.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mavros_msgs/SetMode.h&gt;</span></span>
 
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> clever;
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> clover;
 <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> mavros_msgs;
 
 ros::NodeHandle nh;
@@ -1710,7 +1742,7 @@ ros::ServiceClient&lt;SetMode::Request, SetMode::Response&gt; setMode(<span clas
 
 <span class="hljs-comment">// ...</span>
 
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clever/GetTelemetry.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clover/GetTelemetry.h&gt;</span></span>
 
 <span class="hljs-comment">// ...</span>
 
@@ -1799,7 +1831,7 @@ NodeHandle nh;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Взаимодействие с Arduino","level":"1.8.23","depth":2,"next":{"title":"Подключение GPS","level":"1.8.24","depth":2,"path":"gps.md","ref":"gps.md","articles":[]},"previous":{"title":"Прошивка ESC контроллеров","level":"1.8.22","depth":2,"path":"esc_firmware.md","ref":"esc_firmware.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"arduino.md","mtime":"2020-05-07T15:08:12.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"Взаимодействие с Arduino","level":"1.8.23","depth":2,"next":{"title":"Подключение GPS","level":"1.8.24","depth":2,"path":"gps.md","ref":"gps.md","articles":[]},"previous":{"title":"Прошивка ESC контроллеров","level":"1.8.22","depth":2,"path":"esc_firmware.md","ref":"esc_firmware.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"arduino.md","mtime":"2020-06-02T08:54:58.178Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>

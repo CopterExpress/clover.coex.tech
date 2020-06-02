@@ -258,6 +258,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="rc_flysky_a8s.html">
+            
+                <a href="rc_flysky_a8s.html">
+            
+                    
+                    Работа с FS-A8S
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5.4" data-path="modes.html">
@@ -681,7 +700,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.15" data-path="ros.html">
+        <li class="chapter " data-level="1.7.15" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Использование JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="ros.html">
             
                 <a href="ros.html">
             
@@ -694,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.16" data-path="mavros.html">
+        <li class="chapter " data-level="1.7.17" data-path="mavros.html">
             
                 <a href="mavros.html">
             
@@ -1572,10 +1604,10 @@
 </blockquote>
 <p>&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>aruco_map</code> &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x435;&#x442; &#x43A;&#x430;&#x440;&#x442;&#x44B; ArUco-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;, &#x43A;&#x430;&#x43A; &#x435;&#x434;&#x438;&#x43D;&#x43E;&#x435; &#x446;&#x435;&#x43B;&#x43E;&#x435;. &#x422;&#x430;&#x43A;&#x436;&#x435; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43D;&#x430;&#x432;&#x438;&#x433;&#x430;&#x446;&#x438;&#x44F; &#x43F;&#x43E; &#x43A;&#x430;&#x440;&#x442;&#x430;&#x43C; ArUco-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;&#x430; Vision Position Estimate (VPE).</p>
 <h2 id="&#x43A;&#x43E;&#x43D;&#x444;&#x438;&#x433;&#x443;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;"><a name="&#x43A;&#x43E;&#x43D;&#x444;&#x438;&#x433;&#x443;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;" class="plugin-anchor" href="#&#x43A;&#x43E;&#x43D;&#x444;&#x438;&#x433;&#x443;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x41A;&#x43E;&#x43D;&#x444;&#x438;&#x433;&#x443;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</h2>
-<p>&#x410;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; <code>aruco</code> &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clever/clever/launch/clever.launch</code> &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x442;&#x44C; &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x438; <code>true</code>:</p>
+<p>&#x410;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; <code>aruco</code> &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clover/clover/launch/clover.launch</code> &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x442;&#x44C; &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x438; <code>true</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 </code></pre>
-<p>&#x414;&#x43B;&#x44F; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x43A;&#x430;&#x440;&#x442; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x44B; <code>aruco_map</code> &#x438; <code>aruco_detect</code> &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clever/clever/launch/aruco.launch</code> &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x44B; &#x431;&#x44B;&#x442;&#x44C; &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x438; <code>true</code>:</p>
+<p>&#x414;&#x43B;&#x44F; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x43A;&#x430;&#x440;&#x442; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x44B; <code>aruco_map</code> &#x438; <code>aruco_detect</code> &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clover/clover/launch/aruco.launch</code> &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x44B; &#x431;&#x44B;&#x442;&#x44C; &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x438; <code>true</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco_detect&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">arg</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;aruco_map&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
 </code></pre>
@@ -1589,13 +1621,13 @@
 <p>&#x41F;&#x443;&#x442;&#x44C; &#x43A; &#x444;&#x430;&#x439;&#x43B;&#x443; &#x441; &#x43A;&#x430;&#x440;&#x442;&#x43E;&#x439; &#x437;&#x430;&#x434;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x432; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x435; <code>map</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;$(find aruco_pose)/map/map.txt&quot;</span>/&gt;</span>
 </code></pre>
-<p>&#x421;&#x43C;&#x43E;&#x442;&#x440;&#x438;&#x442;&#x435; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x44B; &#x43A;&#x430;&#x440;&#x442; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x432; &#x43A;&#x430;&#x442;&#x430;&#x43B;&#x43E;&#x433;&#x435; <a href="https://github.com/CopterExpress/clover/tree/master/aruco_pose/map" target="_blank"><code>~/catkin_ws/src/clever/aruco_pose/map</code></a>.</p>
+<p>&#x421;&#x43C;&#x43E;&#x442;&#x440;&#x438;&#x442;&#x435; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x44B; &#x43A;&#x430;&#x440;&#x442; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x432; &#x43A;&#x430;&#x442;&#x430;&#x43B;&#x43E;&#x433;&#x435; <a href="https://github.com/CopterExpress/clover/tree/master/aruco_pose/map" target="_blank"><code>~/catkin_ws/src/clover/aruco_pose/map</code></a>.</p>
 <p>&#x424;&#x430;&#x439;&#x43B; &#x43A;&#x430;&#x440;&#x442;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430; <code>genmap.py</code>:</p>
-<pre><code class="lang-bash">rosrun aruco_pose genmap.py length x y dist_x dist_y first &gt; ~/catkin_ws/src/clever/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
+<pre><code class="lang-bash">rosrun aruco_pose genmap.py length x y dist_x dist_y first &gt; ~/catkin_ws/src/clover/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
 </code></pre>
 <p>&#x413;&#x434;&#x435; <code>length</code> &#x2013; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x440; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x430;, <code>x</code> &#x2013; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x43F;&#x43E; &#x43E;&#x441;&#x438; <em>x</em>, <code>y</code> - &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x43F;&#x43E; &#x43E;&#x441;&#x438; <em>y</em>, <code>dist_x</code> &#x2013; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x435; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x446;&#x435;&#x43D;&#x442;&#x440;&#x430;&#x43C;&#x438; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x43F;&#x43E; &#x43E;&#x441;&#x438; <em>x</em>, <code>y</code> &#x2013; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x435; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x446;&#x435;&#x43D;&#x442;&#x440;&#x430;&#x43C;&#x438; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x43F;&#x43E; &#x43E;&#x441;&#x438; <em>y</em>, <code>first</code> &#x2013; ID &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; (&#x43B;&#x435;&#x432;&#x43E;&#x433;&#x43E; &#x43D;&#x438;&#x436;&#x43D;&#x435;&#x433;&#x43E;) &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x430;, <code>test_map.txt</code> &#x2013; &#x43D;&#x430;&#x437;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x444;&#x430;&#x439;&#x43B;&#x430; &#x441; &#x43A;&#x430;&#x440;&#x442;&#x43E;&#x439;. &#x414;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43A;&#x43B;&#x44E;&#x447; <code>--bottom-left</code> &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x43D;&#x443;&#x43C;&#x435;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x44B; &#x441; &#x43B;&#x435;&#x432;&#x43E;&#x433;&#x43E; &#x43D;&#x438;&#x436;&#x43D;&#x435;&#x433;&#x43E; &#x443;&#x433;&#x43B;&#x430;.</p>
 <p>&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440;:</p>
-<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.33 2 4 1 1 0 &gt; ~/catkin_ws/src/clever/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
+<pre><code class="lang-bash">rosrun aruco_pose genmap.py 0.33 2 4 1 1 0 &gt; ~/catkin_ws/src/clover/aruco_pose/map/<span class="hljs-built_in">test</span>_map.txt
 </code></pre>
 <p>&#x414;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x44E; &#x43F;&#x43E; &#x443;&#x442;&#x438;&#x43B;&#x438;&#x442;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x44C; &#x43F;&#x43E; &#x43A;&#x43B;&#x44E;&#x447;&#x443; <code>-h</code>: <code>rosrun aruco_pose genmap.py -h</code>.</p>
 <p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x43A;&#x430;&#x440;&#x442;&#x443; &#x432; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x43C; <a href="arucogenmap.html">&#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x435;</a>.</p>
@@ -1615,22 +1647,22 @@
 <p><img src="../assets/aruco-map-axis.png" width="600"></p>
 <h2 id="&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-vpe"><a name="&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-vpe" class="plugin-anchor" href="#&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430;-vpe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x41D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x430; VPE</h2>
 <p>&#x414;&#x43B;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x437;&#x43C;&#x430; Vision Position Estimation &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x44B; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x435; <a href="px4_parameters.html">&#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x438; PX4</a>.</p>
-<p>&#x41F;&#x440;&#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; <strong>EKF2</strong> (&#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; <code>SYS_MC_EST_GROUP</code> = <code>ekf2</code>):</p>
-<ul>
-<li>&#x412; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x435; <code>EKF2_AID_MASK</code> &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x44B; &#x444;&#x43B;&#x430;&#x436;&#x43A;&#x438; <code>vision position fusion</code>, <code>vision yaw fusion</code>.</li>
-<li>&#x428;&#x443;&#x43C; &#x443;&#x433;&#x43B;&#x430; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>EKF2_EVA_NOISE</code> = 0.1 rad</li>
-<li>&#x428;&#x443;&#x43C; &#x43F;&#x43E;&#x437;&#x438;&#x446;&#x438;&#x438; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>EKF2_EVP_NOISE</code> = 0.1 m</li>
-<li><code>EKF2_EV_DELAY</code> = 0</li>
-</ul>
 <p>&#x41F;&#x440;&#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; <strong>LPE</strong> (&#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; <code>SYS_MC_EST_GROUP</code> = <code>local_position_estimator, attitude_estimator_q</code>):</p>
 <ul>
 <li>&#x412; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x435; <code>LPE_FUSION</code> &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x44B; &#x444;&#x43B;&#x430;&#x436;&#x43A;&#x438; <code>vision position</code>, <code>land detector</code>. &#x424;&#x43B;&#x430;&#x436;&#x43E;&#x43A; <code>baro</code> &#x440;&#x435;&#x43A;&#x43E;&#x43C;&#x435;&#x43D;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x442;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x44C;.</li>
 <li>&#x412;&#x435;&#x441; &#x443;&#x433;&#x43B;&#x430; &#x43F;&#x43E; &#x440;&#x44B;&#x441;&#x43A;&#x430;&#x43D;&#x44C;&#x44E; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>ATT_W_EXT_HDG</code> = 0.5</li>
 <li>&#x412;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x430; &#x43E;&#x440;&#x438;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x43F;&#x43E; Yaw &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>ATT_EXT_HDG_M</code> = 1 <code>Vision</code>.</li>
 <li>&#x428;&#x443;&#x43C;&#x44B; &#x43F;&#x43E;&#x437;&#x438;&#x446;&#x438;&#x438; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>LPE_VIS_XY</code> = 0.1 m, <code>LPE_VIS_Z</code> = 0.1 m.</li>
-<li><code>LPE_VIS_DELAY</code> = 0 sec</li>
+<li><code>LPE_VIS_DELAY</code> = 0 sec.</li>
 </ul>
 <!-- * Выключен компас: `ATT_W_MAG` = 0 -->
+<p>&#x41F;&#x440;&#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; <strong>EKF2</strong> (&#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; <code>SYS_MC_EST_GROUP</code> = <code>ekf2</code>):</p>
+<ul>
+<li>&#x412; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x435; <code>EKF2_AID_MASK</code> &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x44B; &#x444;&#x43B;&#x430;&#x436;&#x43A;&#x438; <code>vision position fusion</code>, <code>vision yaw fusion</code>.</li>
+<li>&#x428;&#x443;&#x43C; &#x443;&#x433;&#x43B;&#x430; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>EKF2_EVA_NOISE</code> = 0.1 rad.</li>
+<li>&#x428;&#x443;&#x43C; &#x43F;&#x43E;&#x437;&#x438;&#x446;&#x438;&#x438; &#x43F;&#x43E; &#x437;&#x440;&#x435;&#x43D;&#x438;&#x44E;: <code>EKF2_EVP_NOISE</code> = 0.1 m.</li>
+<li><code>EKF2_EV_DELAY</code> = 0.</li>
+</ul>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-lightbulb-o"></strong>
 <p> &#x41D;&#x430; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x43F;&#x43E; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x430;&#x43C; &#x440;&#x435;&#x43A;&#x43E;&#x43C;&#x435;&#x43D;&#x434;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; <strong>LPE</strong>.</p>
 </blockquote>
@@ -1661,7 +1693,7 @@ navigate(x=<span class="hljs-number">2</span>, y=<span class="hljs-number">2</sp
 <h2 id="&#x440;&#x430;&#x441;&#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435;-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;-&#x43D;&#x430;-&#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;"><a name="&#x440;&#x430;&#x441;&#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435;-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;-&#x43D;&#x430;-&#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;" class="plugin-anchor" href="#&#x440;&#x430;&#x441;&#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435;-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;-&#x43D;&#x430;-&#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x420;&#x430;&#x441;&#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432; &#x43D;&#x430; &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;</h2>
 <p><img src="../assets/IMG_4175.JPG" alt="&#x41C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x44B; &#x43D;&#x430; &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;"></p>
 <p>&#x414;&#x43B;&#x44F; &#x43D;&#x430;&#x432;&#x438;&#x433;&#x430;&#x446;&#x438;&#x438; &#x43F;&#x43E; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x430;&#x43C;, &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x43D;&#x430; &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x435;, &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x43F;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x443;&#x44E; &#x43A;&#x430;&#x43C;&#x435;&#x440;&#x443; &#x442;&#x430;&#x43A;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43E;&#x43D;&#x430; &#x441;&#x43C;&#x43E;&#x442;&#x440;&#x435;&#x43B;&#x430; &#x432;&#x432;&#x435;&#x440;&#x445; &#x438; <a href="camera_setup.html#frame">&#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x441;&#x43E;&#x43E;&#x442;&#x432;&#x435;&#x442;&#x441;&#x442;&#x432;&#x443;&#x44E;&#x449;&#x438;&#x439; &#x444;&#x440;&#x435;&#x439;&#x43C; &#x43A;&#x430;&#x43C;&#x435;&#x440;&#x44B;</a>.</p>
-<p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clever/clever/launch/aruco.launch</code> &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; <code>known_tilt</code> &#x432; &#x441;&#x435;&#x43A;&#x446;&#x438;&#x44F;&#x445; <code>aruco_detect</code> &#x438; <code>aruco_map</code> &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; <code>map_flipped</code>:</p>
+<p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x432; &#x444;&#x430;&#x439;&#x43B;&#x435; <code>~/catkin_ws/src/clover/clover/launch/aruco.launch</code> &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; <code>known_tilt</code> &#x432; &#x441;&#x435;&#x43A;&#x446;&#x438;&#x44F;&#x445; <code>aruco_detect</code> &#x438; <code>aruco_map</code> &#x432; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; <code>map_flipped</code>:</p>
 <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;known_tilt&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;map_flipped&quot;</span>/&gt;</span>
 </code></pre>
 <p>&#x41F;&#x440;&#x438; &#x442;&#x430;&#x43A;&#x43E;&#x439; &#x43A;&#x43E;&#x43D;&#x444;&#x438;&#x433;&#x443;&#x440;&#x430;&#x446;&#x438;&#x438; &#x444;&#x440;&#x435;&#x439;&#x43C; <code>aruco_map</code> &#x442;&#x430;&#x43A;&#x436;&#x435; &#x43E;&#x43A;&#x430;&#x436;&#x435;&#x442;&#x441;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x44B;&#x43C;. &#x422;&#x430;&#x43A;&#x438;&#x43C; &#x43E;&#x431;&#x440;&#x430;&#x437;&#x43E;&#x43C;, &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x43D;&#x430; &#x432;&#x44B;&#x441;&#x43E;&#x442;&#x443; 2 &#x43C;&#x435;&#x442;&#x440;&#x430; &#x43D;&#x438;&#x436;&#x435; &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x430;, &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; <code>z</code> &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x430;&#x432;&#x43B;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x432; 2:</p>
@@ -1714,7 +1746,7 @@ navigate(x=<span class="hljs-number">2</span>, y=<span class="hljs-number">2</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Навигация по карте маркеров","level":"1.7.3.3","depth":3,"next":{"title":"Навигация по Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"previous":{"title":"Распознавание маркеров","level":"1.7.3.2","depth":3,"path":"aruco_marker.md","ref":"aruco_marker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"aruco_map.md","mtime":"2020-05-07T15:08:12.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T15:09:11.770Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"Навигация по карте маркеров","level":"1.7.3.3","depth":3,"next":{"title":"Навигация по Optical Flow","level":"1.7.4","depth":2,"path":"optical_flow.md","ref":"optical_flow.md","articles":[]},"previous":{"title":"Распознавание маркеров","level":"1.7.3.2","depth":3,"path":"aruco_marker.md","ref":"aruco_marker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"aruco_map.md","mtime":"2020-06-02T08:54:58.178Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:55:54.408Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>
