@@ -1771,7 +1771,38 @@
 </code></pre>
 </blockquote>
 <!-- markdownlint-enable MD031 -->
-<h3 id="distance"><a name="distance" class="plugin-anchor" href="#distance"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
+<h3 id="navigate_wait"><a name="navigate_wait" class="plugin-anchor" href="#navigate_wait"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
+<p><a name="block-nav"></a><!-- old name of anchor --></p>
+<p><a name="block-takeoff"></a><!-- old name of anchor --></p>
+<p>&#x41F;&#x43E;&#x43B;&#x435;&#x442; &#x432; &#x442;&#x43E;&#x447;&#x43A;&#x443; &#x438; &#x43E;&#x436;&#x438;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430;:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">navigate_wait</span><span class="hljs-params">(x=<span class="hljs-number">0</span>, y=<span class="hljs-number">0</span>, z=<span class="hljs-number">0</span>, yaw=float<span class="hljs-params">(<span class="hljs-string">&apos;nan&apos;</span>)</span>, speed=<span class="hljs-number">0.5</span>, frame_id=<span class="hljs-string">&apos;&apos;</span>, auto_arm=False, tolerance=<span class="hljs-number">0.2</span>)</span>:</span>
+    navigate(x=x, y=y, z=z, yaw=yaw, speed=speed, frame_id=frame_id, auto_arm=auto_arm)
+
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
+        telem = get_telemetry(frame_id=<span class="hljs-string">&apos;navigate_target&apos;</span>)
+        <span class="hljs-keyword">if</span> math.sqrt(telem.x ** <span class="hljs-number">2</span> + telem.y ** <span class="hljs-number">2</span> + telem.z ** <span class="hljs-number">2</span>) &lt; tolerance:
+            <span class="hljs-keyword">break</span>
+        rospy.sleep(<span class="hljs-number">0.2</span>)
+</code></pre>
+<p>&#x414;&#x43B;&#x44F; &#x442;&#x43E;&#x433;&#x43E;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x44C; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x435; &#x434;&#x43E; &#x446;&#x435;&#x43B;&#x435;&#x432;&#x43E;&#x439; &#x442;&#x43E;&#x447;&#x43A;&#x438;, &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442; &#x444;&#x440;&#x435;&#x439;&#x43C; <a href="frames.html#navigate_target"><code>navigate_target</code></a>.</p>
+<p>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x432; &#x442;&#x43E;&#x447;&#x43A;&#x443; x=3, y=2, z=1 <a href="aruco_map.html">&#x43E;&#x442;&#x43D;&#x43E;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x43A;&#x430;&#x440;&#x442;&#x44B; &#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;</a>:</p>
+<pre><code class="lang-python">navigate_wait(x=<span class="hljs-number">3</span>, y=<span class="hljs-number">2</span>, z=<span class="hljs-number">1</span>, frame_id=<span class="hljs-string">&apos;aruco_map&apos;</span>)
+</code></pre>
+<p>&#x42D;&#x442;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x438; &#x434;&#x43B;&#x44F; &#x432;&#x437;&#x43B;&#x435;&#x442;&#x430;:</p>
+<pre><code class="lang-python">navigate_wait(z=<span class="hljs-number">1</span>, frame_id=<span class="hljs-string">&apos;body&apos;</span>, auto_arm=<span class="hljs-keyword">True</span>)
+</code></pre>
+<h3 id="land_wait"><a name="land_wait" class="plugin-anchor" href="#land_wait"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
+<p><a name="block-land"></a><!-- old name of anchor --></p>
+<p>&#x41F;&#x43E;&#x441;&#x430;&#x434;&#x43A;&#x430; &#x438; &#x43E;&#x436;&#x438;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x441;&#x430;&#x434;&#x43A;&#x438;:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">land_wait</span><span class="hljs-params">()</span>:</span>
+    land()
+    <span class="hljs-keyword">while</span> get_telemetry().armed:
+        rospy.sleep(<span class="hljs-number">0.2</span>)
+</code></pre>
+<p>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;:</p>
+<pre><code class="lang-python">land_wait()
+</code></pre>
+<h3 id="get_distance"><a name="get_distance" class="plugin-anchor" href="#get_distance"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p>&#x424;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x44F; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x434;&#x432;&#x443;&#x43C;&#x44F; &#x442;&#x43E;&#x447;&#x43A;&#x430;&#x43C;&#x438; (<strong>&#x432;&#x430;&#x436;&#x43D;&#x43E;</strong>: &#x442;&#x43E;&#x447;&#x43A;&#x438; &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x44B; &#x431;&#x44B;&#x442;&#x44C; &#x432; &#x43E;&#x434;&#x43D;&#x43E;&#x439; <a href="frames.html">&#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x435; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;</a>):</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> math
 
@@ -1780,7 +1811,7 @@
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_distance</span><span class="hljs-params">(x1, y1, z1, x2, y2, z2)</span>:</span>
     <span class="hljs-keyword">return</span> math.sqrt((x1 - x2) ** <span class="hljs-number">2</span> + (y1 - y2) ** <span class="hljs-number">2</span> + (z1 - z2) ** <span class="hljs-number">2</span>)
 </code></pre>
-<h3 id="distance-global"><a name="distance-global" class="plugin-anchor" href="#distance-global"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
+<h3 id="get_distance_global"><a name="get_distance_global" class="plugin-anchor" href="#get_distance_global"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p>&#x424;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F; &#x434;&#x43B;&#x44F; &#x43F;&#x440;&#x438;&#x431;&#x43B;&#x438;&#x437;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x44F; (&#x432; &#x43C;&#x435;&#x442;&#x440;&#x430;&#x445;) &#x43C;&#x435;&#x436;&#x434;&#x443; &#x434;&#x432;&#x443;&#x43C;&#x44F; &#x433;&#x43B;&#x43E;&#x431;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C;&#x438; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x430;&#x43C;&#x438; (&#x448;&#x438;&#x440;&#x43E;&#x442;&#x430;/&#x434;&#x43E;&#x43B;&#x433;&#x43E;&#x442;&#x430;):</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> math
 
@@ -1788,86 +1819,6 @@
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_distance_global</span><span class="hljs-params">(lat1, lon1, lat2, lon2)</span>:</span>
     <span class="hljs-keyword">return</span> math.hypot(lat1 - lat2, lon1 - lon2) * <span class="hljs-number">1.113195e5</span>
-</code></pre>
-<h3 id="block-takeoff"><a name="block-takeoff" class="plugin-anchor" href="#block-takeoff"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>&#x412;&#x437;&#x43B;&#x435;&#x442; &#x438; &#x43E;&#x436;&#x438;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x432;&#x437;&#x43B;&#x435;&#x442;&#x430;:</p>
-<pre><code class="lang-python">z = <span class="hljs-number">2</span>  <span class="hljs-comment"># &#x432;&#x44B;&#x441;&#x43E;&#x442;&#x430;</span>
-tolerance = <span class="hljs-number">0.2</span>  <span class="hljs-comment"># &#x442;&#x43E;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x438; &#x432;&#x44B;&#x441;&#x43E;&#x442;&#x44B; (&#x43C;)</span>
-
-<span class="hljs-comment"># &#x417;&#x430;&#x43F;&#x43E;&#x43C;&#x438;&#x43D;&#x430;&#x435;&#x43C; &#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x442;&#x43E;&#x447;&#x43A;&#x443;</span>
-start = get_telemetry()
-
-<span class="hljs-comment"># &#x412;&#x437;&#x43B;&#x435;&#x442;&#x430;&#x435;&#x43C; &#x43D;&#x430; 2 &#x43C;</span>
-<span class="hljs-keyword">print</span> navigate(z=z, speed=<span class="hljs-number">0.5</span>, frame_id=<span class="hljs-string">&apos;body&apos;</span>, auto_arm=<span class="hljs-keyword">True</span>)
-
-<span class="hljs-comment"># &#x41E;&#x436;&#x438;&#x434;&#x430;&#x435;&#x43C; &#x432;&#x437;&#x43B;&#x435;&#x442;&#x430;</span>
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
-    <span class="hljs-comment"># &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x43C; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x443;&#x44E; &#x432;&#x44B;&#x441;&#x43E;&#x442;&#x443;</span>
-    <span class="hljs-keyword">if</span> start.z + z - get_telemetry().z &lt; tolerance:
-        <span class="hljs-comment"># &#x412;&#x437;&#x43B;&#x435;&#x442; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43D;</span>
-        <span class="hljs-keyword">break</span>
-    rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<p>&#x412;&#x44B;&#x448;&#x435;&#x43F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x434; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x43E;&#x431;&#x435;&#x440;&#x43D;&#x443;&#x442; &#x432; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E;:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">takeoff_wait</span><span class="hljs-params">(alt, speed=<span class="hljs-number">0.5</span>, tolerance=<span class="hljs-number">0.2</span>)</span>:</span>
-    start = get_telemetry()
-    <span class="hljs-keyword">print</span> navigate(z=alt, speed=speed, frame_id=<span class="hljs-string">&apos;body&apos;</span>, auto_arm=<span class="hljs-keyword">True</span>)
-
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
-        <span class="hljs-keyword">if</span> start.z + alt - get_telemetry().z &lt; tolerance:
-            <span class="hljs-keyword">break</span>
-
-        rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<h3 id="block-nav"><a name="block-nav" class="plugin-anchor" href="#block-nav"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>&#x41B;&#x435;&#x442;&#x435;&#x442;&#x44C; &#x432; &#x442;&#x43E;&#x447;&#x43A;&#x443; &#x438; &#x436;&#x434;&#x430;&#x442;&#x44C; &#x43F;&#x43E;&#x43A;&#x430; &#x43A;&#x43E;&#x43F;&#x442;&#x435;&#x440; &#x434;&#x43E;&#x43B;&#x435;&#x442;&#x438;&#x442; &#x432; &#x43D;&#x435;&#x435;:</p>
-<pre><code class="lang-python">tolerance = <span class="hljs-number">0.2</span>  <span class="hljs-comment"># &#x442;&#x43E;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x438; &#x43F;&#x440;&#x438;&#x43B;&#x435;&#x442;&#x430; (&#x43C;)</span>
-frame_id=<span class="hljs-string">&apos;aruco_map&apos;</span>
-
-<span class="hljs-comment"># &#x41B;&#x435;&#x442;&#x438;&#x43C; &#x432; &#x442;&#x43E;&#x447;&#x43A;&#x443; 1:2:3 &#x432; &#x43F;&#x43E;&#x43B;&#x435; ArUco-&#x43C;&#x430;&#x440;&#x43A;&#x435;&#x440;&#x43E;&#x432;</span>
-<span class="hljs-keyword">print</span> navigate(frame_id=frame_id, x=<span class="hljs-number">1</span>, y=<span class="hljs-number">2</span>, z=<span class="hljs-number">3</span>, speed=<span class="hljs-number">0.5</span>)
-
-<span class="hljs-comment"># &#x416;&#x434;&#x435;&#x43C;, &#x43F;&#x43E;&#x43A;&#x430; &#x43A;&#x43E;&#x43F;&#x442;&#x435;&#x440; &#x434;&#x43E;&#x43B;&#x435;&#x442;&#x438;&#x442; &#x434;&#x43E; &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x442;&#x43E;&#x447;&#x43A;&#x438;</span>
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
-    telem = get_telemetry(frame_id=frame_id)
-    <span class="hljs-comment"># &#x412;&#x44B;&#x447;&#x438;&#x441;&#x43B;&#x44F;&#x435;&#x43C; &#x440;&#x430;&#x441;&#x441;&#x442;&#x43E;&#x44F;&#x43D;&#x438;&#x435; &#x434;&#x43E; &#x437;&#x430;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x439; &#x442;&#x43E;&#x447;&#x43A;&#x438;</span>
-    <span class="hljs-keyword">if</span> get_distance(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, telem.x, telem.y, telem.z) &lt; tolerance:
-        <span class="hljs-comment"># &#x414;&#x43E;&#x43B;&#x435;&#x442;&#x435;&#x43B;&#x438; &#x434;&#x43E; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;&#x439; &#x442;&#x43E;&#x447;&#x43A;&#x438;</span>
-        <span class="hljs-keyword">break</span>
-    rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<p>&#x412;&#x44B;&#x448;&#x435;&#x43F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x434; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x43E;&#x431;&#x435;&#x440;&#x43D;&#x443;&#x442; &#x432; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E;:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">navigate_wait</span><span class="hljs-params">(x, y, z, speed, frame_id, tolerance=<span class="hljs-number">0.2</span>)</span>:</span>
-    navigate(x=x, y=y, z=z, speed=speed, frame_id=frame_id)
-
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
-        telem = get_telemetry(frame_id=frame_id)
-        <span class="hljs-keyword">if</span> get_distance(x, y, z, telem.x, telem.y, telem.z) &lt; tolerance:
-            <span class="hljs-keyword">break</span>
-        rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<p>&#x411;&#x43E;&#x43B;&#x435;&#x435; &#x443;&#x43D;&#x438;&#x432;&#x435;&#x440;&#x441;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x444;&#x440;&#x435;&#x439;&#x43C;&#x430; <code>navigate_target</code>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x441;&#x43E;&#x432;&#x43F;&#x430;&#x434;&#x430;&#x435;&#x442; &#x441; &#x446;&#x435;&#x43B;&#x435;&#x432;&#x43E;&#x439; &#x442;&#x43E;&#x447;&#x43A;&#x43E;&#x439; &#x43D;&#x430;&#x432;&#x438;&#x433;&#x430;&#x446;&#x438;&#x438; &#x434;&#x440;&#x43E;&#x43D;&#x430;:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">navigate_wait</span><span class="hljs-params">(x, y, z, speed, frame_id, tolerance=<span class="hljs-number">0.2</span>)</span>:</span>
-    navigate(x=x, y=y, z=z, speed=speed, frame_id=frame_id)
-
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
-        telem = get_telemetry(frame_id=<span class="hljs-string">&apos;navigate_target&apos;</span>)
-        <span class="hljs-keyword">if</span> math.sqrt(telem.x ** <span class="hljs-number">2</span> + telem.y ** <span class="hljs-number">2</span> + telem.z ** <span class="hljs-number">2</span>) &lt; tolerance:
-            <span class="hljs-keyword">break</span>
-        rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<p>&#x422;&#x430;&#x43A;&#x43E;&#x439; &#x43A;&#x43E;&#x434; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x43B;&#x435;&#x442;&#x430; &#x432; &#x442;&#x43E;&#x43C; &#x447;&#x438;&#x441;&#x43B;&#x435; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x444;&#x440;&#x435;&#x439;&#x43C;&#x430; <code>body</code>.</p>
-<h3 id="block-land"><a name="block-land" class="plugin-anchor" href="#block-land"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>&#x41F;&#x43E;&#x441;&#x430;&#x434;&#x43A;&#x430; &#x438; &#x43E;&#x436;&#x438;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43E;&#x43A;&#x43E;&#x43D;&#x447;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x441;&#x430;&#x434;&#x43A;&#x438;:</p>
-<pre><code class="lang-python">land()
-<span class="hljs-keyword">while</span> get_telemetry().armed:
-    rospy.sleep(<span class="hljs-number">0.2</span>)
-</code></pre>
-<p>&#x412;&#x44B;&#x448;&#x435;&#x43F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x434; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x43E;&#x431;&#x435;&#x440;&#x43D;&#x443;&#x442; &#x432; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E;:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">land_wait</span><span class="hljs-params">()</span>:</span>
-    land()
-    <span class="hljs-keyword">while</span> get_telemetry().armed:
-        rospy.sleep(<span class="hljs-number">0.2</span>)
 </code></pre>
 <h3 id="disarm"><a name="disarm" class="plugin-anchor" href="#disarm"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p>&#x414;&#x438;&#x437;&#x430;&#x440;&#x43C; &#x43A;&#x43E;&#x43F;&#x442;&#x435;&#x440;&#x430; (&#x432;&#x44B;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x438;&#x43D;&#x442;&#x43E;&#x432;, <strong>&#x43A;&#x43E;&#x43F;&#x442;&#x435;&#x440; &#x443;&#x43F;&#x430;&#x434;&#x435;&#x442;</strong>):</p>
@@ -2133,7 +2084,7 @@ calibrate_gyro()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Примеры кода","level":"1.8.7","depth":2,"next":{"title":"Лазерный дальномер","level":"1.8.8","depth":2,"path":"laser.md","ref":"laser.md","articles":[]},"previous":{"title":"Системы координат","level":"1.8.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"snippets.md","mtime":"2020-08-20T17:36:34.003Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-20T17:38:39.382Z"},"basePath":".","book":{"language":"ru"}});
+            gitbook.page.hasChanged({"page":{"title":"Примеры кода","level":"1.8.7","depth":2,"next":{"title":"Лазерный дальномер","level":"1.8.8","depth":2,"path":"laser.md","ref":"laser.md","articles":[]},"previous":{"title":"Системы координат","level":"1.8.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"ru","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"snippets.md","mtime":"2020-08-21T15:17:18.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-21T15:20:07.121Z"},"basePath":".","book":{"language":"ru"}});
         });
     </script>
 </div>
