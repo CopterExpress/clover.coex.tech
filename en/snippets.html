@@ -1488,7 +1488,7 @@
 <h3 id="navigate_wait"><a name="navigate_wait" class="plugin-anchor" href="#navigate_wait"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p><a name="block-nav"></a><!-- old name of anchor --></p>
 <p><a name="block-takeoff"></a><!-- old name of anchor --></p>
-<p>Flying towards a point and waiting for copter&apos;s arrival:</p>
+<p>Fly towards a point and wait for copter&apos;s arrival:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> math
 
 <span class="hljs-comment">#...</span>
@@ -1511,7 +1511,7 @@
 </code></pre>
 <h3 id="block-land"><a name="block-land" class="plugin-anchor" href="#block-land"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p><a name="block-land"></a><!-- old name of anchor --></p>
-<p>Landing and waiting until the copter lands:</p>
+<p>Land and wait until the copter lands:</p>
 <pre><code class="lang-python">land()
 <span class="hljs-keyword">while</span> get_telemetry().armed:
     rospy.sleep(<span class="hljs-number">0.2</span>)
@@ -1533,7 +1533,7 @@
         rospy.sleep(<span class="hljs-number">0.2</span>)
 </code></pre>
 <h3 id="get_distance"><a name="get_distance" class="plugin-anchor" href="#get_distance"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Calculating the distance between two points (<strong>important</strong>: the points are to be in the same <a href="frames.html">system of coordinates</a>):</p>
+<p>Calculate the distance between two points (<strong>important</strong>: the points are to be in the same <a href="frames.html">coordinate system</a>):</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_distance</span><span class="hljs-params">(x1, y1, z1, x2, y2, z2)</span>:</span>
     <span class="hljs-keyword">return</span> math.sqrt((x1 - x2) ** <span class="hljs-number">2</span> + (y1 - y2) ** <span class="hljs-number">2</span> + (z1 - z2) ** <span class="hljs-number">2</span>)
 </code></pre>
@@ -1543,7 +1543,7 @@
     <span class="hljs-keyword">return</span> math.hypot(lat1 - lat2, lon1 - lon2) * <span class="hljs-number">1.113195e5</span>
 </code></pre>
 <h3 id="disarm"><a name="disarm" class="plugin-anchor" href="#disarm"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Quadcopter disarm (disabling propellers <strong>the copter will fall down</strong>):</p>
+<p>Disarm the drone (propellers will stop, <strong>the drone will fall down</strong>):</p>
 <pre><code class="lang-python"><span class="hljs-comment"># Declaring a proxy:</span>
 <span class="hljs-keyword">from</span> mavros_msgs.srv <span class="hljs-keyword">import</span> CommandBool
 arming = rospy.ServiceProxy(<span class="hljs-string">&apos;mavros/cmd/arming&apos;</span>, CommandBool)
@@ -1553,7 +1553,7 @@ arming = rospy.ServiceProxy(<span class="hljs-string">&apos;mavros/cmd/arming&ap
 arming(<span class="hljs-keyword">False</span>)  <span class="hljs-comment"># &#x434;&#x438;&#x437;&#x430;&#x440;&#x43C;</span>
 </code></pre>
 <h3 id="transform"><a name="transform" class="plugin-anchor" href="#transform"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Transforming the position (<code>PoseStamped</code>) from one system of coordinates (<a href="frames.html">of frame</a>) to another one using [tf2] (<a href="http://wiki.ros.org/tf2" target="_blank">http://wiki.ros.org/tf2</a>):</p>
+<p>Transform the position (<code>PoseStamped</code>) from one <a href="frames.html">coordinate system</a> to another using <a href="http://wiki.ros.org/tf2" target="_blank">tf2</a>:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> tf2_ros
 <span class="hljs-keyword">import</span> tf2_geometry_msgs
 <span class="hljs-keyword">from</span> geometry_msgs.msg <span class="hljs-keyword">import</span> PoseStamped
@@ -1563,30 +1563,30 @@ tf_listener = tf2_ros.TransformListener(tf_buffer)
 
 <span class="hljs-comment"># ...</span>
 
-<span class="hljs-comment"># PoseStamped object creation (or getting it from a topic):</span>
+<span class="hljs-comment"># Create PoseStamped object (or get it from a topic):</span>
 pose = PoseStamped()
-pose.header.frame_id = <span class="hljs-string">&apos;map&apos;</span> <span class="hljs-comment"># frame, which is the position is specified</span>
-pose.header.stamp = rospy.get_rostime() <span class="hljs-comment"># the instant for which the position is specified (current time)</span>
+pose.header.frame_id = <span class="hljs-string">&apos;map&apos;</span> <span class="hljs-comment"># coordinate frame, in which the position is specified</span>
+pose.header.stamp = rospy.get_rostime() <span class="hljs-comment"># the time for which the position is specified (current time)</span>
 pose.pose.position.x = <span class="hljs-number">1</span>
 pose.pose.position.y = <span class="hljs-number">2</span>
 pose.pose.position.z = <span class="hljs-number">3</span>
 pose.pose.orientation.w = <span class="hljs-number">1</span>
 
-frame_id = <span class="hljs-string">&apos;base_link&apos;</span> <span class="hljs-comment"># target frame</span>
-transform_timeout = rospy.Duration(<span class="hljs-number">0.2</span>) <span class="hljs-comment"># wait for transformation timeout</span>
+frame_id = <span class="hljs-string">&apos;base_link&apos;</span> <span class="hljs-comment"># target coordinate frame</span>
+transform_timeout = rospy.Duration(<span class="hljs-number">0.2</span>) <span class="hljs-comment"># timeout for transformation</span>
 
-<span class="hljs-comment"># Transforming the position from the old frame to the new one:</span>
+<span class="hljs-comment"># Transform the position from the old frame to the new one:</span>
 new_pose = tf_buffer.transform(pose, frame_id, transform_timeout)
 </code></pre>
 <h3 id="upside-down"><a name="upside-down" class="plugin-anchor" href="#upside-down"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Determining whether the copter is turned upside-down:</p>
+<p>Determine whether the copter is turned upside-down:</p>
 <pre><code class="lang-python">PI_2 = math.pi / <span class="hljs-number">2</span>
 telem = get_telemetry()
 
 flipped = abs(telem.pitch) &gt; PI_2 <span class="hljs-keyword">or</span> abs(telem.roll) &gt; PI_2
 </code></pre>
 <h3 id="angle-hor"><a name="angle-hor" class="plugin-anchor" href="#angle-hor"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Calculating the copter total horizontal angle:</p>
+<p>Calculate the copter horizontal angle:</p>
 <pre><code class="lang-python">PI_2 = math.pi / <span class="hljs-number">2</span>
 telem = get_telemetry()
 
@@ -1596,7 +1596,7 @@ angle_to_horizon = math.atan(math.hypot(math.tan(telem.pitch), math.tan(telem.ro
     angle_to_horizon = math.pi - angle_to_horizon
 </code></pre>
 <h3 id="circle"><a name="circle" class="plugin-anchor" href="#circle"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Flying along a circular path:</p>
+<p>Fly along a circular path:</p>
 <pre><code class="lang-python">RADIUS = <span class="hljs-number">0.6</span>  <span class="hljs-comment"># m</span>
 SPEED = <span class="hljs-number">0.3</span> <span class="hljs-comment"># rad / s</span>
 
@@ -1614,14 +1614,14 @@ r = rospy.Rate(<span class="hljs-number">10</span>)
     r.sleep()
 </code></pre>
 <h3 id="rate"><a name="rate" class="plugin-anchor" href="#rate"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>repeating an action at a frequency of 10 Hz:</p>
+<p>Repeat an action at a frequency of 10 Hz:</p>
 <pre><code class="lang-python">r = rospy.Rate(<span class="hljs-number">10</span>)
 <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> rospy.is_shutdown():
     <span class="hljs-comment"># Do anything</span>
     r.sleep()
 </code></pre>
 <h3 id="mavros-sub"><a name="mavros-sub" class="plugin-anchor" href="#mavros-sub"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>An example of subscription to a topic from MAVROS</p>
+<p>An example of subscription to a topic from MAVROS:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> geometry_msgs.msg <span class="hljs-keyword">import</span> PoseStamped, TwistStamped
 <span class="hljs-keyword">from</span> sensor_msgs.msg <span class="hljs-keyword">import</span> BatteryState
 <span class="hljs-keyword">from</span> mavros_msgs.msg <span class="hljs-keyword">import</span> RCIn
@@ -1644,7 +1644,7 @@ rospy.Subscriber(<span class="hljs-string">&apos;mavros/rc/in&apos;</span>, RCIn
 <!-- markdownlint-disable MD044 -->
 <h3 id="mavlink"><a name="mavlink" class="plugin-anchor" href="#mavlink"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <!-- markdownlint-enable MD044 -->
-<p>Sending an arbitrary <a href="mavlink.html">MAVLink message</a> to the copter:</p>
+<p>Send an arbitrary <a href="mavlink.html">MAVLink message</a> to the copter:</p>
 <pre><code class="lang-python"><span class="hljs-comment"># ...</span>
 
 <span class="hljs-keyword">from</span> mavros_msgs.msg <span class="hljs-keyword">import</span> Mavlink
@@ -1664,13 +1664,13 @@ ros_msg = mavlink.convert_to_rosmsg(msg)
 mavlink_pub.publish(ros_msg)
 </code></pre>
 <h3 id="rc-sub"><a name="rc-sub" class="plugin-anchor" href="#rc-sub"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
-<p>Return on mode switching with the transmitter (may be used for starting an autonomous flight, see <a href="https://gist.github.com/okalachev/b709f04522d2f9af97e835baedeb806b" target="_blank">example</a>):</p>
+<p>React to the drone&apos;s mode switching (may be used for starting an autonomous flight, see <a href="https://gist.github.com/okalachev/b709f04522d2f9af97e835baedeb806b" target="_blank">example</a>):</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> mavros_msgs.msg <span class="hljs-keyword">import</span> RCIn
 
 <span class="hljs-comment"># Called when new data is received from the transmitter</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rc_callback</span><span class="hljs-params">(data)</span>:</span>
-    <span class="hljs-comment"># Return on switch toggling of the transmitter</span>
-        <span class="hljs-keyword">if</span> data.channels[<span class="hljs-number">5</span>] &lt; <span class="hljs-number">1100</span>:
+    <span class="hljs-comment"># React on toggling the mode of the transmitter</span>
+    <span class="hljs-keyword">if</span> data.channels[<span class="hljs-number">5</span>] &lt; <span class="hljs-number">1100</span>:
         <span class="hljs-comment"># ...</span>
         <span class="hljs-keyword">pass</span>
     <span class="hljs-keyword">elif</span> data.channels[<span class="hljs-number">5</span>] &gt; <span class="hljs-number">1900</span>:
@@ -1729,7 +1729,7 @@ rospy.sleep(<span class="hljs-number">10</span>)
 rospy.loginfo(<span class="hljs-string">&apos;flip&apos;</span>)
 flip()
 </code></pre>
-<p>Requires the <a href="firmware.html#modified-firmware-for-clover">special PX4 firmware for Clover</a>. Before running a flip, take all necessary safty precautions.</p>
+<p>Requires the <a href="firmware.html#modified-firmware-for-clover">special PX4 firmware for Clover</a>. Before running a flip, take all necessary safety precautions.</p>
 <h3 id="calibrate-gyro"><a name="calibrate-gyro" class="plugin-anchor" href="#calibrate-gyro"><i class="fa fa-link" aria-hidden="true"></i></a># </h3>
 <p>Perform gyro calibration:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
@@ -1806,7 +1806,7 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code snippets","level":"1.7.7","depth":2,"next":{"title":"Interfacing with a laser rangefinder","level":"1.7.8","depth":2,"path":"laser.md","ref":"laser.md","articles":[]},"previous":{"title":"Coordinate systems (frames)","level":"1.7.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"snippets.md","mtime":"2020-08-21T19:08:58.140Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-21T19:10:53.740Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Code snippets","level":"1.7.7","depth":2,"next":{"title":"Interfacing with a laser rangefinder","level":"1.7.8","depth":2,"path":"laser.md","ref":"laser.md","articles":[]},"previous":{"title":"Coordinate systems (frames)","level":"1.7.6","depth":2,"path":"frames.md","ref":"frames.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"snippets.md","mtime":"2020-08-21T19:47:28.041Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-21T19:50:16.652Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
