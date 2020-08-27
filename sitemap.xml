@@ -122,6 +122,8 @@
 <url> <loc>https://clover.coex.tech/en/modes.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/power.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/failsafe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/flight.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/flight_exercises.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/raspberry.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/image.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/wifi.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
