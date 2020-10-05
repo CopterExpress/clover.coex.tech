@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Wi-Fi connection · Clover</title>
+        <title>Glossary · Clover</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="connection.html" />
+    <link rel="next" href="safety.html" />
     
     
-    <link rel="prev" href="image.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -123,7 +123,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="glossary.html">
+        <li class="chapter active" data-level="1.2" data-path="glossary.html">
             
                 <a href="glossary.html">
             
@@ -395,7 +395,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="wifi.html">
+        <li class="chapter " data-level="1.7.2" data-path="wifi.html">
             
                 <a href="wifi.html">
             
@@ -1461,7 +1461,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Wi-Fi connection</a>
+        <a href="." >Glossary</a>
     </h1>
 </div>
 
@@ -1476,18 +1476,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="connecting-to-clover-via-wi-fi"><a name="connecting-to-clover-via-wi-fi" class="plugin-anchor" href="#connecting-to-clover-via-wi-fi"><i class="fa fa-link" aria-hidden="true"></i></a>Connecting to Clover via Wi-Fi</h1>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The following applies to <a href="image.html">image version</a> <strong>0.20</strong> and up. See <a href="https://github.com/CopterExpress/clover/blob/v0.19/docs/en/wifi.md" target="_blank">previous version of the article</a> for older images.</p>
-</blockquote>
-<p><a href="image.html">RPi image</a> provides a pre-configured Wi-Fi access point with SSID <code>clover-xxxx</code>, where <code>xxxx</code> are four random numbers that are assigned when your Raspberry Pi is run for the first time.</p>
-<p>Connect to this Wi-Fi using the password <code>cloverwifi</code>.</p>
-<p><img src="../assets/ssid.png" width="300px" alt="Wi-Fi SSID"></p>
-<p>To edit Wi-Fi settings, or to obtain more detailed information about the network device on Raspberry Pi, read this <a href="network.html">article</a>.</p>
-<h2 id="web-interface"><a name="web-interface" class="plugin-anchor" href="#web-interface"><i class="fa fa-link" aria-hidden="true"></i></a>Web interface</h2>
-<p>After connecting to Clover Wi-Fi, open <a href="http://192.168.11.1" target="_blank">http://192.168.11.1</a> in you web browser. It contains all the basic web tools of Clover: viewing image topics, web terminal (Butterfly), and the full copy of this documentation.</p>
-<p><img src="../assets/web.png" alt="Clover Web Interface" class="zoom"></p>
-<p><strong>Next</strong>: <a href="connection.html">Connecting Raspberry Pi to the flight controller</a>.</p>
+                                <h1 id="glossary"><a name="glossary" class="plugin-anchor" href="#glossary"><i class="fa fa-link" aria-hidden="true"></i></a>Glossary</h1>
+<h2 id="drone"><a name="drone" class="plugin-anchor" href="#drone"><i class="fa fa-link" aria-hidden="true"></i></a>Drone</h2>
+<p>An unmanned aircraft. Typical examples are: quadrotors, hexacopters, model airplanes, fixed wings, VTOLs, model helicopters.</p>
+<h2 id="quadcopter"><a name="quadcopter" class="plugin-anchor" href="#quadcopter"><i class="fa fa-link" aria-hidden="true"></i></a>Quadcopter</h2>
+<p>An unmanned aerial vehicle with 4 propellers and an electronic stabilization system.</p>
+<h2 id="multicopter"><a name="multicopter" class="plugin-anchor" href="#multicopter"><i class="fa fa-link" aria-hidden="true"></i></a>Multicopter</h2>
+<p>An unmanned aerial vehicle with an electronic stabilization system and the number of propellers equal to 3 (tricopter), 4 (quadcopter), 6 (hexacopter), 8 (octocopter), or more.</p>
+<h2 id="flight-controller--autopilot"><a name="flight-controller--autopilot" class="plugin-anchor" href="#flight-controller--autopilot"><i class="fa fa-link" aria-hidden="true"></i></a>Flight controller / autopilot</h2>
+<p><strong>1.</strong> A specialized circuit-board designed for controlling a multicopter, a plane or another vehicle. Examples:
+Pixhawk, ArduPilot, Naze32, CC3D.</p>
+<p><strong>2.</strong> Software for the multicopter control circuit-board. Examples: PX4, APM, CleanFlight, BetaFlight.</p>
+<h2 id="firmware"><a name="firmware" class="plugin-anchor" href="#firmware"><i class="fa fa-link" aria-hidden="true"></i></a>Firmware</h2>
+<p>Software primarily for embedded systems, for example, a flight controller or an ESC.</p>
+<h2 id="motor"><a name="motor" class="plugin-anchor" href="#motor"><i class="fa fa-link" aria-hidden="true"></i></a>Motor</h2>
+<p>An electric motor that rotates propellers of the multicopter. Brushless motors are commonly used. These motors require an ESC.</p>
+<h2 id="esc--motor-controller"><a name="esc--motor-controller" class="plugin-anchor" href="#esc--motor-controller"><i class="fa fa-link" aria-hidden="true"></i></a>ESC / motor controller</h2>
+<p>An Electronic Speed Controller. A specialized circuit-board that controls the speed of the brushless motor. It is controlled by a flight controller using pulse width modulation (PWM).</p>
+<p>ESC has the firmware that determines the characteristics of its operation.</p>
+<h2 id="battery"><a name="battery" class="plugin-anchor" href="#battery"><i class="fa fa-link" aria-hidden="true"></i></a>Battery</h2>
+<p>A rechargeable power source for the drone. Quadrotors typically use LiPo (lithium-ion polymer) batteries.</p>
+<h2 id="battery-cell"><a name="battery-cell" class="plugin-anchor" href="#battery-cell"><i class="fa fa-link" aria-hidden="true"></i></a>Battery cell</h2>
+<p>Single element of the battery pack. Typical drone batteries contain several (2 to 6) cells connected in series. Maximum LiPo cell voltage is 4.2 v; battery voltage is a sum of each cell&apos;s voltage (if they are connected in series). The number of cells connected in series is marked by the letter <em>S</em>, as in <em>2S</em> (two cells in series), <em>3S</em>, <em>4S</em>.</p>
+<p>Clover kits typically use <em>3S</em> batteries.</p>
+<h2 id="remote-control--radio-control-equipment"><a name="remote-control--radio-control-equipment" class="plugin-anchor" href="#remote-control--radio-control-equipment"><i class="fa fa-link" aria-hidden="true"></i></a>Remote control / radio control equipment</h2>
+<p>A radio-operated quadcopter remote control. Operation of the remote control requires connecting a receiver to the flight controller.</p>
+<p>Clover may also be <a href="rc.html">controlled from a smartphone</a>.</p>
+<h2 id="telemetry"><a name="telemetry" class="plugin-anchor" href="#telemetry"><i class="fa fa-link" aria-hidden="true"></i></a>Telemetry</h2>
+<p><strong>1.</strong> Transmitting the data about the state of a quadcopter or another aircraft over a distance.</p>
+<p><strong>2.</strong> The data about the aircraft state (height, orientation, global coordinates, etc.).</p>
+<p><strong>3.</strong> A system for transmitting the data about the  aircraft state or commands to it over the air. Examples: radio modems (RFD900, 3DR Radio Modem), Wi-Fi modules (ESP-07). Raspberry Pi may also be used in Clover as a telemetry module: <a href="gcs_bridge.html">the use of QGroundControl via Wi-Fi</a>.</p>
+<h2 id="arming"><a name="arming" class="plugin-anchor" href="#arming"><i class="fa fa-link" aria-hidden="true"></i></a>Arming</h2>
+<p>Armed is the state of copter readiness for the flight. When the gas stick is lifted, or when an external command with the target point is sent, the copter will fly. Usually, a copter starts rotating its propellers when it is switched to the &quot;armed&quot; state, even if the gas stick is down.</p>
+<p>The opposite state is Disarmed.</p>
+<h2 id="px4"><a name="px4" class="plugin-anchor" href="#px4"><i class="fa fa-link" aria-hidden="true"></i></a>PX4</h2>
+<p>A popular open source flight controller software that works with the Pixhawk series of flight controllers, Pixracer, and others. PX4 is recommended to be used with Clover.</p>
+<h2 id="raspberry-pi"><a name="raspberry-pi" class="plugin-anchor" href="#raspberry-pi"><i class="fa fa-link" aria-hidden="true"></i></a>Raspberry Pi</h2>
+<p><a href="raspberry.html">A popular single-board computer</a> that is used in the Clover kit.</p>
+<h2 id="sd-card-image"><a name="sd-card-image" class="plugin-anchor" href="#sd-card-image"><i class="fa fa-link" aria-hidden="true"></i></a>SD card image</h2>
+<p>A complete digital copy of SD card contents stored in a single file. This file may be written to an SD card using special software like Etcher. A Raspberry Pi&apos;s SD card is the only long-term memory of the single-board computer.</p>
+<p>The Clover kit includes a <a href="image.html">recommended SD card image</a></p>
+<h2 id="apm--ardupilot"><a name="apm--ardupilot" class="plugin-anchor" href="#apm--ardupilot"><i class="fa fa-link" aria-hidden="true"></i></a>APM / ArduPilot</h2>
+<p>An open source flight controller originally created for the Arduino boards. It was later ported to Pixhawk, Pixracer and other boards.</p>
+<h2 id="mavlink"><a name="mavlink" class="plugin-anchor" href="#mavlink"><i class="fa fa-link" aria-hidden="true"></i></a>MAVLink</h2>
+<p>A communication protocol for drones, ground stations and other devices over radio channels. This protocol is widely used for telemetry.</p>
+<h2 id="ros"><a name="ros" class="plugin-anchor" href="#ros"><i class="fa fa-link" aria-hidden="true"></i></a>ROS</h2>
+<p>A popular framework for writing complex robotics applications.</p>
+<h2 id="mavros"><a name="mavros" class="plugin-anchor" href="#mavros"><i class="fa fa-link" aria-hidden="true"></i></a>MAVROS</h2>
+<p>A library that is a link between the aircraft operating using the MAVLink protocol, and ROS.</p>
+<h2 id="uart"><a name="uart" class="plugin-anchor" href="#uart"><i class="fa fa-link" aria-hidden="true"></i></a>UART</h2>
+<p>A serial asynchronous data transfer interface used in many devices. For example, GPS antennas, Wi-Fi routers, or Pixhawk.</p>
+<h2 id="imu"><a name="imu" class="plugin-anchor" href="#imu"><i class="fa fa-link" aria-hidden="true"></i></a>IMU</h2>
+<p>Inertial measurement unit. A set of inertial sensors (a gyroscope and an accelerometer; a magnetometer is typically added as well) that allow the drone to compute its orientation (and, to a lesser extent, position) in space.</p>
+<h2 id="estimation"><a name="estimation" class="plugin-anchor" href="#estimation"><i class="fa fa-link" aria-hidden="true"></i></a>Estimation</h2>
+<p>A process of current state (position, rotation, velocity, angular rates, etc.) estimation performed by the flight controller software. A <a href="https://en.wikipedia.org/wiki/Kalman_filter" target="_blank">Kalman Filter</a> is typically used for sensor fusion; other filters are typically applied to raw sensor data.</p>
+<p>PX4 has two estimation modules: LPE and <a href="https://dev.px4.io/en/tutorials/tuning_the_ecl_ekf.html" target="_blank">ECL EKF</a> (EKF2).</p>
+<p>APM utilizes its <a href="http://ardupilot.org/dev/docs/ekf2-estimation-system.html" target="_blank">EKF2</a> subsystem.</p>
 <p><footer id="page-footer" class="localized-footer"><!-- markdownlint-disable MD041 -->
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../assets/cc-by-nc-sa.svg"></a>
 This documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
@@ -1519,12 +1563,12 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
 
             
                 
-                <a href="image.html" class="navigation navigation-prev " aria-label="Previous page: RPi Image">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="connection.html" class="navigation navigation-next " aria-label="Next page: Connection to the Pixracer">
+                <a href="safety.html" class="navigation navigation-next " aria-label="Next page: Safety tips">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1535,7 +1579,7 @@ This documentation is licensed under a <a rel="license" href="http://creativecom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Wi-Fi connection","level":"1.7.2","depth":2,"next":{"title":"Connection to the Pixracer","level":"1.7.3","depth":2,"path":"connection.md","ref":"connection.md","articles":[]},"previous":{"title":"RPi Image","level":"1.7.1","depth":2,"path":"image.md","ref":"image.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","collapsible-menu","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"_GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"wifi.md","mtime":"2020-10-05T22:49:54.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-05T22:51:53.822Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Glossary","level":"1.2","depth":1,"next":{"title":"Safety tips","level":"1.3","depth":1,"path":"safety.md","ref":"safety.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["richquotes@https://github.com/okalachev/gitbook-plugin-richquotes.git","yametrika","anchors","collapsible-menu","validate-links","bulk-redirect@https://github.com/okalachev/gitbook-plugin-bulk-redirect.git","sitemap@https://github.com/okalachev/plugin-sitemap.git","toolbar@https://github.com/hamishwillee/gitbook-plugin-toolbar.git","addcssjs","localized-footer@https://github.com/okalachev/gitbook-plugin-localized-footer.git","image-zoom@https://github.com/okalachev/gitbook-plugin-image-zoom.git","language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"yametrika":{"id":49359238},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3,"languages":[["ru","Russian"],["en","English"]]},"image-zoom":{},"search":{},"addcssjs":{"css":["../clover.css"],"js":["../clover.js"]},"localized-footer":{"filename":"./FOOTER.md","hline":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://clover.coex.tech"},"bulk-redirect":{"basepath":"","redirectsFile":"redirects.json","blank":true},"toolbar":{"buttons":[{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/CopterExpress/clover/edit/master/docs/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","position":"left","url":"https://github.com/CopterExpress/clover"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Copter Express","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"_GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Clover","language":"en","gitbook":"*","description":"Конструктор квадрокоптера «Клевер»"},"file":{"path":"glossary.md","mtime":"2020-10-05T22:49:54.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-05T22:51:53.822Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
