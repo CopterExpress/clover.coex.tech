@@ -3,6 +3,7 @@
 <url> <loc>https://clover.coex.tech/ru/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/gloss.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/safety.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/assembly.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/assemble_4_2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/assemble_4_1.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/assemble_4.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -44,12 +45,13 @@
 <url> <loc>https://clover.coex.tech/ru/autolaunch.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/javascript.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/blocks.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://clover.coex.tech/ru/ros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://clover.coex.tech/ru/mavros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/simulation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/simulation_native.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/simulation_vm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/simulation_usage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/ros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/mavros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/supplementary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/coex_pix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/auto_setup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/hostname.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -86,6 +88,8 @@
 <url> <loc>https://clover.coex.tech/ru/leds_old.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/contributing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/migrate20.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/events.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/copterhack2021.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/copterhack2019.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/nti2019.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/robocross2019.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -112,6 +116,7 @@
 <url> <loc>https://clover.coex.tech/en/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/gloss.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/safety.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/assembly.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/assemble_4_2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/assemble_4.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/assemble_3.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -152,12 +157,13 @@
 <url> <loc>https://clover.coex.tech/en/autolaunch.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/javascript.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/blocks.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://clover.coex.tech/en/ros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://clover.coex.tech/en/mavros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/simulation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/simulation_native.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/simulation_vm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/simulation_usage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/ros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/mavros.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/supplementary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/coex_pix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/auto_setup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/hostname.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -190,6 +196,7 @@
 <url> <loc>https://clover.coex.tech/en/leds_old.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/contributing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/migrate20.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/en/projects.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/clever-show.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/innopolis_open_L22_AERO.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/en/shield.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
