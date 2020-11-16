@@ -91,6 +91,8 @@
 <url> <loc>https://clover.coex.tech/ru/leds_old.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/contributing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/migrate20.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/duocam.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/duocam_mavlink.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/events.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/copterhack2021.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/copterhack2019.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
