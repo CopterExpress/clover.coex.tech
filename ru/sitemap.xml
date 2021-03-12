@@ -55,6 +55,7 @@
 <url> <loc>https://clover.coex.tech/ru/supplementary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/coex_pix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/coex_pdb.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://clover.coex.tech/ru/coex_gps.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/auto_setup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/hostname.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://clover.coex.tech/ru/sitl.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
